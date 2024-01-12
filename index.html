@@ -2,7 +2,16 @@
 <head>
 <title>Organigrama Seremi RM (WIP!)</title>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-</head>
+<script>
+	function ready(fn) {
+	  if (document.readyState !== 'loading') {
+	    fn();
+	  } else {
+	    document.addEventListener('DOMContentLoaded', fn);
+	  }
+	}	
+	const urlDatosOrganigrama = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSdd7YSKHLGaFBb6XzN67YlYd72VGrtaHYB40U1b5_dg-zv8tf1BiJf-EqcU5DKAg/pub?gid=821030335&single=true&output=csv"
+</script>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <style>
 	body {
@@ -25,6 +34,7 @@
 		fill: red;
 	}
 </style>
+</head>
 <body>
 	<script type="module">
 		function eventoZoom(e) {
@@ -48,7 +58,11 @@
 			}); 
 		}
 		console.log(lista)
-
+		ready(() => {
+			let datos = await d3.csv(urlDatosOrganigrama,(d) => {
+				console.log(d);
+			});
+		})
 	</script>
 	<div id="contenedor" width="500" height="500">
 		<svg version="1.1" id="Organigrama_SVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
