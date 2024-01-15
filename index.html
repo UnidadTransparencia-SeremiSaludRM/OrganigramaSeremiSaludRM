@@ -57,6 +57,11 @@
 		font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif; 
 		font-weight: 100;
 	}
+
+	h1 {
+		letter-spacing: -0.05em;
+
+	}
 	h2 {
 		color: #666666;
 		font-size: 1em;
@@ -75,9 +80,6 @@
 		height: 100%;
 	}
 
-
-	#Organigrama_SVG {		
-	}
 	#panel {
 		padding: 1em 2em;
 		background-color: #f8f8f8;		
@@ -112,11 +114,6 @@
 			border-left: none;
 		}
 	}
-
-
-
-
-
 	.cuadroOrganigrama {
 		cursor: pointer;
 	}
@@ -164,14 +161,14 @@
 				
 				cuadro.addEventListener('click', () => { 
 					datosCuadro = datosOrganigrama.find((registro) => registro.N == id.replaceAll("_",".").replace("c",""));
-					panel.classList.replace("oculto","visible");
-					console.log(datosCuadro);
+					console.log(document.querySelector(`#${id}`).getBBox());
 					document.querySelector("h1").textContent = datosCuadro.Nombre;
 					document.querySelector("h2").textContent = datosCuadro.Cargo;
 					document.querySelector("h3").textContent = datosCuadro.Estructura;
 					for (let parrafo of panel.querySelectorAll('p')) {
-						parrafo.remove()
+						parrafo.remove();
 					}
+					panel.classList.replace("oculto","visible");
 					panel.insertAdjacentHTML('beforeend', "<p>" + datosCuadro.Descripción.split("\n").join("</p><p>") + "</p>");
 					panel.scrollTop = 0;
 				}); 
@@ -211,1657 +208,1657 @@
 				<use xlink:href="#SVGID_3_"  overflow="visible"/>
 			</clipPath>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="137.807" y1="386.255" x2="137.807" y2="404.556"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="137.807" y1="386.255" x2="137.807" y2="404.556"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.24,386.255"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.24,122.037"/>
 			<polyline opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" points="1665.943,472.154
 				1665.943,503.359 1687.297,503.359 		"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1665.943" y1="503.359" x2="1687.297" y2="503.359"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1665.943" y1="503.359" x2="1687.297" y2="503.359"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1665.943,472.154"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1687.297" y1="536.596" x2="1665.967" y2="536.596"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1687.297" y1="536.596" x2="1665.967" y2="536.596"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1687.297" y1="536.596" x2="1665.967" y2="536.596"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1687.297" y1="569.831" x2="1666.037" y2="569.831"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1687.297" y1="569.831" x2="1666.037" y2="569.831"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1687.297" y1="569.831" x2="1666.037" y2="569.831"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1687.297" y1="603.067" x2="1665.99" y2="603.067"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1687.297" y1="603.067" x2="1665.99" y2="603.067"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1687.297" y1="603.067" x2="1665.99" y2="603.067"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1687.297" y1="636.304" x2="1665.967" y2="636.304"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1687.297" y1="636.304" x2="1665.967" y2="636.304"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1687.297" y1="636.304" x2="1665.967" y2="636.304"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1687.297" y1="669.54" x2="1666.014" y2="669.54"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1687.297" y1="669.54" x2="1666.014" y2="669.54"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1687.297" y1="669.54" x2="1666.014" y2="669.54"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1630.469" y1="558.548" x2="1609.091" y2="558.548"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1630.469" y1="558.548" x2="1609.091" y2="558.548"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1630.469,429.879"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.827,429.877"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="123.701" y1="678.403" x2="137.827" y2="678.403"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.827,429.877"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="678.403" x2="137.827" y2="678.403"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="678.403" x2="137.827" y2="678.403"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.827,429.886"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="123.701" y1="647.043" x2="137.827" y2="647.043"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.827,429.886"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="647.043" x2="137.827" y2="647.043"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="647.043" x2="137.827" y2="647.043"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.827,429.872"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="123.701" y1="615.683" x2="137.827" y2="615.683"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.827,429.872"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="615.683" x2="137.827" y2="615.683"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="615.683" x2="137.827" y2="615.683"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.827,429.881"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="123.701" y1="584.321" x2="137.827" y2="584.321"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.827,429.881"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="584.321" x2="137.827" y2="584.321"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="584.321" x2="137.827" y2="584.321"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.811,429.879"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="153.024" y1="584.319" x2="137.811" y2="584.319"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.811,429.879"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="153.024" y1="584.319" x2="137.811" y2="584.319"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="153.024" y1="584.319" x2="137.811" y2="584.319"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.827,429.891"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="123.701" y1="552.961" x2="137.827" y2="552.961"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.827,429.891"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="552.961" x2="137.827" y2="552.961"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="552.961" x2="137.827" y2="552.961"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.811,429.883"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="153.024" y1="553.024" x2="137.811" y2="553.024"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.811,429.883"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="153.024" y1="553.024" x2="137.811" y2="553.024"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="153.024" y1="553.024" x2="137.811" y2="553.024"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.827,429.876"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="123.701" y1="521.601" x2="137.827" y2="521.601"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.827,429.876"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="521.601" x2="137.827" y2="521.601"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="521.601" x2="137.827" y2="521.601"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.811,429.876"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="153.024" y1="521.601" x2="137.811" y2="521.601"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.811,429.876"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="153.024" y1="521.601" x2="137.811" y2="521.601"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="153.024" y1="521.601" x2="137.811" y2="521.601"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.827,429.886"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="123.701" y1="490.239" x2="137.827" y2="490.239"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.827,429.886"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="490.239" x2="137.827" y2="490.239"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="490.239" x2="137.827" y2="490.239"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.811,429.885"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="153.024" y1="490.238" x2="137.811" y2="490.238"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.811,429.885"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="153.024" y1="490.238" x2="137.811" y2="490.238"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="153.024" y1="490.238" x2="137.811" y2="490.238"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.811,429.871"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="153.024" y1="458.879" x2="137.811" y2="458.879"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.811,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="153.024" y1="458.879" x2="137.811" y2="458.879"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="153.024" y1="458.879" x2="137.811" y2="458.879"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.827,429.871"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="123.701" y1="458.879" x2="137.827" y2="458.879"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.827,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="458.879" x2="137.827" y2="458.879"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="458.879" x2="137.827" y2="458.879"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M137.827,429.891"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="123.701" y1="709.765" x2="137.827" y2="709.765"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M137.827,429.891"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="709.765" x2="137.827" y2="709.765"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="123.701" y1="709.765" x2="137.827" y2="709.765"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1630.461" y1="386.215" x2="1630.461" y2="404.556"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1630.461" y1="386.215" x2="1630.461" y2="404.556"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.24,386.215"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.24,122.037"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1630.469" y1="458.887" x2="1651.87" y2="458.887"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1630.469" y1="458.887" x2="1651.87" y2="458.887"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1630.469,429.879"/>
 			<polyline opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" points="767.24,122.037
 				767.24,151.423 876.634,151.423 		"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" x1="767.24" y1="151.423" x2="876.634" y2="151.423"/>
-			<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" d="M767.24,122.037"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" x1="767.24" y1="151.423" x2="876.634" y2="151.423"/>
+			<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" d="M767.24,122.037"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M767.244,122.033"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="718.89" y1="151.419" x2="767.244" y2="151.419"/>
-			<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" d="M767.244,122.033"/>
+			<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" d="M767.244,122.033"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" x1="718.89" y1="151.419" x2="767.244" y2="151.419"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" x1="718.89" y1="151.419" x2="767.244" y2="151.419"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" x1="909.909" y1="185.175" x2="955.949" y2="185.175"/>
-			<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" d="M909.909,157.561"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" x1="909.909" y1="185.175" x2="955.949" y2="185.175"/>
+			<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" d="M909.909,157.561"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M909.918,157.571"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="857.524" y1="185.185" x2="909.918" y2="185.185"/>
-			<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" d="M909.918,157.571"/>
+			<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" d="M909.918,157.571"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" x1="857.524" y1="185.185" x2="909.918" y2="185.185"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" x1="857.524" y1="185.185" x2="909.918" y2="185.185"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M909.918,157.56"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="859.036" y1="213.261" x2="909.918" y2="213.261"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M909.918,157.56"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="859.036" y1="213.261" x2="909.918" y2="213.261"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="859.036" y1="213.261" x2="909.918" y2="213.261"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M909.907,157.561"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="955.947" y1="213.262" x2="909.907" y2="213.262"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M909.907,157.561"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="955.947" y1="213.262" x2="909.907" y2="213.262"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="955.947" y1="213.262" x2="909.907" y2="213.262"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M909.918,157.55"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="859.036" y1="244.715" x2="909.918" y2="244.715"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M909.918,157.55"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="859.036" y1="244.715" x2="909.918" y2="244.715"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="859.036" y1="244.715" x2="909.918" y2="244.715"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M909.907,157.551"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="955.947" y1="244.716" x2="909.907" y2="244.716"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M909.907,157.551"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="955.947" y1="244.716" x2="909.907" y2="244.716"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="955.947" y1="244.716" x2="909.907" y2="244.716"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M909.918,157.563"/>
 
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M909.918,157.563"/>
 
-				<line id="paco" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="859.036" y1="279.547" x2="909.918" y2="279.547"/>
-				<line id="paco" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="859.036" y1="313.716" x2="909.918" y2="313.716"/>			
+				<line id="paco" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="859.036" y1="279.547" x2="909.918" y2="279.547"/>
+				<line id="paco" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="859.036" y1="313.716" x2="909.918" y2="313.716"/>			
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M909.907,157.565"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="955.947" y1="279.549" x2="909.907" y2="279.549"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M909.907,157.565"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="955.947" y1="279.549" x2="909.907" y2="279.549"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="955.947" y1="279.549" x2="909.907" y2="279.549"/>
 			<polyline opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" points="978.184,324.204
 				959.434,324.204 959.434,301.876 991.436,301.876 991.436,292.22 		"/>
 
-				<polyline clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" points="
+				<polyline clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" points="
 				959.434,301.876 991.436,301.876 991.436,292.22 		"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="978.184" y1="324.204" x2="959.434" y2="324.204"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="978.184" y1="324.204" x2="959.434" y2="324.204"/>
 			<polyline opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" points="959.434,301.848
 				991.436,301.848 991.436,292.198 		"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="978.184" y1="358.954" x2="959.434" y2="358.954"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="991.436" y1="301.848" x2="991.436" y2="292.198"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="991.436" y1="301.848" x2="991.436" y2="292.198"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M959.434,301.848"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="978.184" y1="358.954" x2="959.434" y2="358.954"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="978.184" y1="358.954" x2="959.434" y2="358.954"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M767.25,122.047"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="718.896" y1="180.535" x2="767.25" y2="180.535"/>
-			<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" d="M767.25,122.047"/>
+			<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" d="M767.25,122.047"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" x1="718.896" y1="180.535" x2="767.25" y2="180.535"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" x1="718.896" y1="180.535" x2="767.25" y2="180.535"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.24,122.037"/>
 
-				<polyline clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" points="
+				<polyline clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" points="
 				648.374,404.556 648.374,386.255 767.24,386.255 		"/>
 			<polyline opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" points="626.992,458.879
 				648.37,458.879 648.37,429.871 		"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M648.37,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="626.992" y1="458.879" x2="648.37" y2="458.879"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="626.992" y1="458.879" x2="648.37" y2="458.879"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M648.37,429.869"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="626.992" y1="501.065" x2="648.37" y2="501.065"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M648.37,429.869"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="626.992" y1="501.065" x2="648.37" y2="501.065"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="626.992" y1="501.065" x2="648.37" y2="501.065"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M648.37,429.891"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="626.992" y1="543.253" x2="648.37" y2="543.253"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M648.37,429.891"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="626.992" y1="543.253" x2="648.37" y2="543.253"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="626.992" y1="543.253" x2="648.37" y2="543.253"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M648.378,429.867"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="669.756" y1="567.819" x2="648.378" y2="567.819"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M648.378,429.867"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="669.756" y1="567.819" x2="648.378" y2="567.819"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="669.756" y1="567.819" x2="648.378" y2="567.819"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M648.378,429.889"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="669.756" y1="610.763" x2="648.378" y2="610.763"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M648.378,429.889"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="669.756" y1="610.851" x2="648.378" y2="610.851"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="669.756" y1="610.851" x2="648.378" y2="610.851"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M767.248,122.037"/>
 			<polyline opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" points="850.587,404.556
 				850.587,386.209 767.248,386.209 		"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.248,122.037"/>
 
-				<polyline clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" points="
+				<polyline clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" points="
 				850.587,404.556 850.587,386.209 767.248,386.209 		"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M850.591,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="829.213" y1="458.879" x2="850.591" y2="458.879"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="829.213" y1="458.879" x2="850.591" y2="458.879"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M850.583,429.869"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="829.205" y1="501.065" x2="850.583" y2="501.065"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M850.583,429.869"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="829.205" y1="501.065" x2="850.583" y2="501.065"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="829.205" y1="501.065" x2="850.583" y2="501.065"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M850.591,429.869"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="871.969" y1="524.877" x2="850.591" y2="524.877"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M850.591,429.869"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="871.969" y1="524.877" x2="850.591" y2="524.877"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="871.969" y1="524.877" x2="850.591" y2="524.877"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M850.591,429.867"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="871.969" y1="567.819" x2="850.591" y2="567.819"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M850.591,429.867"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="871.969" y1="567.819" x2="850.591" y2="567.819"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="871.969" y1="567.819" x2="850.591" y2="567.819"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M850.591,429.889"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="871.969" y1="610.763" x2="850.591" y2="610.763"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M850.591,429.889"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="871.969" y1="610.763" x2="850.591" y2="610.763"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="871.969" y1="610.763" x2="850.591" y2="610.763"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M459.118,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="474.331" y1="458.879" x2="459.118" y2="458.879"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="474.331" y1="458.879" x2="459.118" y2="458.879"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M459.118,429.877"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="474.331" y1="509.507" x2="459.118" y2="509.507"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="474.331" y1="509.507" x2="459.118" y2="509.507"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M459.118,429.883"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="474.331" y1="560.135" x2="459.118" y2="560.135"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="474.331" y1="560.135" x2="459.118" y2="560.135"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M459.118,429.889"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="474.347" y1="610.75" x2="459.134" y2="610.75"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="474.347" y1="610.75" x2="459.134" y2="610.75"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="459.114" y1="386.255" x2="459.114" y2="404.556"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="459.114" y1="386.255" x2="459.114" y2="404.556"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.24,386.255"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.24,122.037"/>
 			<polyline opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" points="335.394,486.224
 				320.181,486.224 320.181,429.885 		"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M320.181,429.885"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="486.224" x2="320.181" y2="486.224"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="486.224" x2="320.181" y2="486.224"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M320.181,429.883"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="335.394" y1="518.158" x2="320.181" y2="518.158"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M320.181,429.883"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="518.158" x2="320.181" y2="518.158"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="518.158" x2="320.181" y2="518.158"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M320.181,429.88"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="550.092" x2="320.181" y2="550.092"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="550.092" x2="320.181" y2="550.092"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M320.181,429.877"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="335.394" y1="582.026" x2="320.181" y2="582.026"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M320.181,429.877"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="582.026" x2="320.181" y2="582.026"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="582.026" x2="320.181" y2="582.026"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M320.181,429.875"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="335.394" y1="613.961" x2="320.181" y2="613.961"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M320.181,429.875"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="613.961" x2="320.181" y2="613.961"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="613.961" x2="320.181" y2="613.961"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M320.181,429.872"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="335.394" y1="645.896" x2="320.181" y2="645.896"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M320.181,429.872"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="645.896" x2="320.181" y2="645.896"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="645.896" x2="320.181" y2="645.896"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M320.181,429.87"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="335.394" y1="677.83" x2="320.181" y2="677.83"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M320.181,429.87"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="677.83" x2="320.181" y2="677.83"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="677.83" x2="320.181" y2="677.83"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M320.181,429.891"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="335.394" y1="709.765" x2="320.181" y2="709.765"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M320.181,429.891"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="709.765" x2="320.181" y2="709.765"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="335.394" y1="709.765" x2="320.181" y2="709.765"/>
 			<polyline opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" points="306.071,458.879
 				320.197,458.879 320.197,444.375 		"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="306.071" y1="458.879" x2="320.197" y2="458.879"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="306.071" y1="458.879" x2="320.197" y2="458.879"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.236,122.037"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.236,386.209"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M320.189,404.556"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1059.197,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1037.819" y1="458.879" x2="1059.197" y2="458.879"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1037.819" y1="458.879" x2="1059.197" y2="458.879"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1059.197,429.871"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1080.575" y1="484.202" x2="1059.197" y2="484.202"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1059.197,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1080.575" y1="484.202" x2="1059.197" y2="484.202"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1080.575" y1="484.202" x2="1059.197" y2="484.202"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1059.197,429.871"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1080.575" y1="517.862" x2="1059.197" y2="517.862"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1059.197,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1080.575" y1="517.862" x2="1059.197" y2="517.862"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1080.575" y1="517.862" x2="1059.197" y2="517.862"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1059.197,429.87"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1080.575" y1="551.523" x2="1059.197" y2="551.523"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1059.197,429.87"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1080.575" y1="551.523" x2="1059.197" y2="551.523"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1080.575" y1="551.523" x2="1059.197" y2="551.523"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1059.193" y1="585.193" x2="1080.571" y2="585.193"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1059.193,429.879"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1059.193" y1="585.193" x2="1080.571" y2="585.193"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1059.193" y1="585.193" x2="1080.571" y2="585.193"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1059.193,429.879"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1059.193" y1="618.854" x2="1080.571" y2="618.854"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1059.193,429.879"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1059.193" y1="618.854" x2="1080.571" y2="618.854"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1059.193" y1="618.854" x2="1080.571" y2="618.854"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1059.193,429.879"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1059.193" y1="652.517" x2="1080.571" y2="652.517"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1059.193,429.879"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1059.193" y1="652.517" x2="1080.571" y2="652.517"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1059.193" y1="652.517" x2="1080.571" y2="652.517"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1059.193,429.879"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.248,122.037"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.248,386.249"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1059.193" y1="404.556" x2="1059.193" y2="386.249"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1059.193" y1="404.556" x2="1059.193" y2="386.249"/>
 			<polyline opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" points="1246.426,458.879
 				1267.804,458.879 1267.804,429.871 		"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1267.804,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1246.426" y1="458.879" x2="1267.804" y2="458.879"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1246.426" y1="458.879" x2="1267.804" y2="458.879"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1267.804,429.888"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1289.182" y1="610.762" x2="1267.804" y2="610.762"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1267.804,429.888"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1289.182" y1="610.762" x2="1267.804" y2="610.762"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1289.182" y1="610.762" x2="1267.804" y2="610.762"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1267.799" y1="644.414" x2="1289.178" y2="644.414"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1267.799,429.879"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1267.799" y1="644.414" x2="1289.178" y2="644.414"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1267.799" y1="644.414" x2="1289.178" y2="644.414"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1267.799,429.879"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1267.799" y1="678.075" x2="1289.178" y2="678.075"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1267.799,429.879"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1267.799" y1="678.075" x2="1289.178" y2="678.075"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1267.799" y1="678.075" x2="1289.178" y2="678.075"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1267.799,429.879"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1267.799" y1="711.736" x2="1289.178" y2="711.736"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1267.799,429.879"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1267.799" y1="711.736" x2="1289.178" y2="711.736"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1267.799" y1="711.736" x2="1289.178" y2="711.736"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1267.799,429.879"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1267.804,429.871"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1246.426" y1="490.698" x2="1267.804" y2="490.698"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1267.804,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1246.426" y1="490.698" x2="1267.804" y2="490.698"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1246.426" y1="490.698" x2="1267.804" y2="490.698"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1267.804,429.871"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1246.426" y1="522.517" x2="1267.804" y2="522.517"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1267.804,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1246.426" y1="522.517" x2="1267.804" y2="522.517"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1246.426" y1="522.517" x2="1267.804" y2="522.517"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1267.804,429.871"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1246.426" y1="554.335" x2="1267.804" y2="554.335"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1267.804,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1246.426" y1="554.335" x2="1267.804" y2="554.335"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1246.426" y1="554.335" x2="1267.804" y2="554.335"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1267.804,429.871"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1246.426" y1="586.154" x2="1267.804" y2="586.154"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1267.804,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1246.426" y1="586.154" x2="1267.804" y2="586.154"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1246.426" y1="586.154" x2="1267.804" y2="586.154"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.248,122.037"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.248,386.266"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1267.799" y1="404.556" x2="1267.799" y2="386.266"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1267.799" y1="404.556" x2="1267.799" y2="386.266"/>
 			<polyline opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" points="1449.638,458.879
 				1428.26,458.879 1428.26,429.871 		"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1428.26,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1449.638" y1="458.879" x2="1428.26" y2="458.879"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1449.638" y1="458.879" x2="1428.26" y2="458.879"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1428.26,429.883"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1449.638" y1="492.103" x2="1428.26" y2="492.103"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1428.26,429.883"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1449.638" y1="492.103" x2="1428.26" y2="492.103"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1449.638" y1="492.103" x2="1428.26" y2="492.103"/>
 			<path opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" d="M1428.26,429.87"/>
 
 				<line opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" x1="1449.638" y1="525.327" x2="1428.26" y2="525.327"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1428.26,429.87"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1449.638" y1="525.327" x2="1428.26" y2="525.327"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1449.638" y1="525.327" x2="1428.26" y2="525.327"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1428.256" y1="386.147" x2="1428.256" y2="404.556"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1428.256" y1="386.147" x2="1428.256" y2="404.556"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.24,386.147"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M767.24,122.037"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1630.465,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1609.087" y1="458.879" x2="1630.465" y2="458.879"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1609.087" y1="458.879" x2="1630.465" y2="458.879"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1630.465,429.883"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1609.087" y1="492.104" x2="1630.465" y2="492.104"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1609.087" y1="492.104" x2="1630.465" y2="492.104"/>
 
-				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
+				<path clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" d="
 				M1630.465,429.871"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1609.087" y1="525.327" x2="1630.465" y2="525.327"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1609.087" y1="525.327" x2="1630.465" y2="525.327"/>
 	</g><!-- /lineas -->
 	<g id="c7" class="cuadroOrganigrama">
 				<rect x="799.977" y="404.556" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="101.221" height="25.323"/>
 
-				<rect x="799.977" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="101.221" height="25.323"/>
+				<rect x="799.977" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="101.221" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 811.0283 411.7275)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Departamento Laboratorio de </tspan></text>
+				<text transform="matrix(1 0 0 1 811.0283 411.7275)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Departamento Laboratorio de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 814.6738 419.2275)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Salud Pública, Ambiental y </tspan></text>
+				<text transform="matrix(1 0 0 1 814.6738 419.2275)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Salud Pública, Ambiental y </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 840.5137 426.7275)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Laboral</tspan></text>
+				<text transform="matrix(1 0 0 1 840.5137 426.7275)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Laboral</tspan></text>
 			</g>
 	</g>
 	<g id="c7_1" class="cuadroOrganigrama">
 				<rect x="751.827" y="446.218" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.322"/>
 
-				<rect x="751.827" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
+				<rect x="751.827" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 764.0234 457.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Coordinación </tspan></text>
+				<text transform="matrix(1 0 0 1 764.0234 457.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Coordinación </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 765.1533 463.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Técnico Administrativa</tspan></text>
+				<text transform="matrix(1 0 0 1 765.1533 463.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Técnico Administrativa</tspan></text>
 			</g>
 	</g>
 	<g id="c7_2" class="cuadroOrganigrama">
 				<rect x="751.819" y="488.404" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.323"/>
 
-				<rect x="751.819" y="488.404" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
+				<rect x="751.819" y="488.404" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 770.4033 502.8662)" fill="#3D3D3D" font-size="5">Unidad de Calidad</text>
+				<text transform="matrix(1 0 0 1 770.4033 502.8662)" fill="#005B8C" font-size="5">Unidad de Calidad</text>
 			</g>
 	</g>
 	<g id="c7_3" class="cuadroOrganigrama">
 				<rect x="871.969" y="512.216" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.322"/>
 
-				<rect x="871.969" y="512.216" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
+				<rect x="871.969" y="512.216" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 879.3066 523.6768)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento Vigilancia </tspan></text>
+				<text transform="matrix(1 0 0 1 879.3066 523.6768)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento Vigilancia </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 882.2773 529.6768)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Microbiologica Ambiental</tspan></text>
+				<text transform="matrix(1 0 0 1 882.2773 529.6768)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Microbiologica Ambiental</tspan></text>
 			</g>
 	</g>
 	<g id="c7_4" class="cuadroOrganigrama">
 				<rect x="871.969" y="555.158" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.323"/>
 
-				<rect x="871.969" y="555.158" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
+				<rect x="871.969" y="555.158" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 879.3066 566.6191)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento Vigilancia </tspan></text>
+				<text transform="matrix(1 0 0 1 879.3066 566.6191)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento Vigilancia </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 889.5869 572.6191)" fill="#3D3D3D" font-size="5">Quimica Ambiental</text>
+				<text transform="matrix(1 0 0 1 889.5869 572.6191)" fill="#005B8C" font-size="5">Quimica Ambiental</text>
 			</g>
 	</g>
 	<g id="c7_5" class="cuadroOrganigrama">
 				<rect x="871.969" y="598.101" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.323"/>
 
-				<rect x="871.969" y="598.101" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
+				<rect x="871.969" y="598.101" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 881.5859 609.5615)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento Gestión </tspan></text>
+				<text transform="matrix(1 0 0 1 881.5859 609.5615)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento Gestión </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 886.4717 615.5615)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Sanitaria de Muestras</tspan></text>
+				<text transform="matrix(1 0 0 1 886.4717 615.5615)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Sanitaria de Muestras</tspan></text>
 			</g>
 	</g>
 	<g id="c6" class="cuadroOrganigrama">
 				<rect x="612.882" y="404.556" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="612.882" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="612.882" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 629.1504 415.4775)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Departamento </tspan></text>
+				<text transform="matrix(1 0 0 1 629.1504 415.4775)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Departamento </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 637.3564 422.9775)" fill="#3D3D3D" font-size="6" font-weight="bold">Jurídico</text>
+				<text transform="matrix(1 0 0 1 637.3564 422.9775)" fill="#005B8C" font-size="6" font-weight="bold">Jurídico</text>
 			</g>
 	</g>
 	<g id="c6_1" class="cuadroOrganigrama">
 				<rect x="556.008" y="446.218" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="556.008" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="556.008" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 565.0039 457.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Coordinación </tspan></text>
+				<text transform="matrix(1 0 0 1 565.0039 457.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Coordinación </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 575.4609 463.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Administrativa</tspan></text>
+				<text transform="matrix(1 0 0 1 575.4609 463.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Administrativa</tspan></text>
 			</g>
 	</g>
 	<g id="c6_2" class="cuadroOrganigrama">
 				<rect x="556.008" y="488.404" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="556.008" y="488.404" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="556.008" y="488.404" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 564.043 499.8662)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Transparencia </tspan></text>
+				<text transform="matrix(1 0 0 1 564.043 499.8662)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Transparencia </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 562.9307 505.8652)" fill="#3D3D3D" font-size="5">y Respuestas Ciudadanas</text>
+				<text transform="matrix(1 0 0 1 562.9307 505.8652)" fill="#005B8C" font-size="5">y Respuestas Ciudadanas</text>
 			</g>
 	</g>
 	<g id="c6_3" class="cuadroOrganigrama">
 				<rect x="556.008" y="530.592" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="556.008" y="530.592" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="556.008" y="530.592" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 565.6514 542.0527)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad Procedimientos </tspan></text>
+				<text transform="matrix(1 0 0 1 565.6514 542.0527)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad Procedimientos </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 576.5498 548.0527)" fill="#3D3D3D" font-size="5">Disciplinarios</text>
+				<text transform="matrix(1 0 0 1 576.5498 548.0527)" fill="#005B8C" font-size="5">Disciplinarios</text>
 			</g>
 	</g>
 	<g id="c6_4" class="cuadroOrganigrama">
 				<rect x="669.756" y="555.158" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="669.756" y="555.158" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="669.756" y="555.158" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 681.9727 566.6191)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 681.9727 566.6191)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 682.9102 572.6191)" fill="#3D3D3D" font-size="5">Sumarios Sanitarios</text>
+				<text transform="matrix(1 0 0 1 682.9102 572.6191)" fill="#005B8C" font-size="5">Sumarios Sanitarios</text>
 			</g>
 	</g>
 	<g id="c6_5" class="cuadroOrganigrama">
 				<rect x="669.756" y="598.101" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="669.756" y="598.101" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="669.756" y="598.101" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 681.9727 609.5615)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 681.9727 609.5615)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 685.9697 615.5615)" fill="#3D3D3D" font-size="5">Asesoría Jurídica</text>
+				<text transform="matrix(1 0 0 1 685.9697 615.5615)" fill="#005B8C" font-size="5">Asesoría Jurídica</text>
 			</g>
 	</g>
 	<g id="c8" class="cuadroOrganigrama">
 				<rect x="1008.583" y="404.556" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="101.221" height="25.323"/>
 
-				<rect x="1008.583" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="101.221" height="25.323"/>
+				<rect x="1008.583" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="101.221" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1025.8438 415.4775)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Departamento de Acción </tspan></text>
+				<text transform="matrix(1 0 0 1 1025.8438 415.4775)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Departamento de Acción </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1047.1445 422.9775)" fill="#3D3D3D" font-size="6" font-weight="bold">Sanitaria</text>
+				<text transform="matrix(1 0 0 1 1047.1445 422.9775)" fill="#005B8C" font-size="6" font-weight="bold">Sanitaria</text>
 			</g>
 	</g>
 	<g id="c8_1" class="cuadroOrganigrama">
 				<rect x="960.434" y="446.218" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.322"/>
 
-				<rect x="960.434" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
+				<rect x="960.434" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 975.8076 457.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Apoyo a la </tspan></text>
+				<text transform="matrix(1 0 0 1 975.8076 457.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Apoyo a la </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 990.5938 463.6787)" fill="#3D3D3D" font-size="5">Gestión</text>
+				<text transform="matrix(1 0 0 1 990.5938 463.6787)" fill="#005B8C" font-size="5">Gestión</text>
 			</g>
 	</g>
 	<g id="c8_2" class="cuadroOrganigrama">
 				<rect x="1080.575" y="471.54" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.323"/>
 
-				<rect x="1080.575" y="471.54" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
+				<rect x="1080.575" y="471.54" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1095.9932 480.001)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1095.9932 480.001)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1097.3428 486.001)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Control Sanitario de </tspan></text>
+				<text transform="matrix(1 0 0 1 1097.3428 486.001)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Control Sanitario de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1108.0391 492.001)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Alimentos</tspan></text>
+				<text transform="matrix(1 0 0 1 1108.0391 492.001)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Alimentos</tspan></text>
 			</g>
 	</g>
 	<g id="c8_3" class="cuadroOrganigrama">
 				<rect x="1080.575" y="505.201" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.323"/>
 
-				<rect x="1080.575" y="505.201" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
+				<rect x="1080.575" y="505.201" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1089.1475 513.6621)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de Salud </tspan></text>
+				<text transform="matrix(1 0 0 1 1089.1475 513.6621)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de Salud </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1087.9785 519.6631)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Ocupacional y Prevención de</tspan></text>
+				<text transform="matrix(1 0 0 1 1087.9785 519.6631)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Ocupacional y Prevención de</tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1110.4043 525.6631)" fill="#3D3D3D" font-size="5">Riesgos</text>
+				<text transform="matrix(1 0 0 1 1110.4043 525.6631)" fill="#005B8C" font-size="5">Riesgos</text>
 			</g>
 	</g>
 	<g id="c8_4" class="cuadroOrganigrama">
 				<rect x="1080.575" y="538.862" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.322"/>
 
-				<rect x="1080.575" y="538.862" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
+				<rect x="1080.575" y="538.862" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1095.9932 547.3232)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1095.9932 547.3232)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1095.0967 553.3232)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Estrategias Sanitarias </tspan></text>
+				<text transform="matrix(1 0 0 1 1095.0967 553.3232)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Estrategias Sanitarias </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1088.1396 559.3232)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Transversales y Emergentes</tspan></text>
+				<text transform="matrix(1 0 0 1 1088.1396 559.3232)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Transversales y Emergentes</tspan></text>
 			</g>
 	</g>
 	<g id="c8_5" class="cuadroOrganigrama">
 				<rect x="1080.575" y="572.523" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.322"/>
 
-				<rect x="1080.575" y="572.523" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
+				<rect x="1080.575" y="572.523" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1095.9932 583.9844)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1095.9932 583.9844)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1098.8174 589.9844)" fill="#3D3D3D" font-size="5">Gestión Ambiental</text>
+				<text transform="matrix(1 0 0 1 1098.8174 589.9844)" fill="#005B8C" font-size="5">Gestión Ambiental</text>
 			</g>
 	</g>
 	<g id="c8_6" class="cuadroOrganigrama">
 				<rect x="1080.575" y="606.185" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.322"/>
 
-				<rect x="1080.575" y="606.185" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
+				<rect x="1080.575" y="606.185" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1095.9932 617.6455)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1095.9932 617.6455)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1088.7725 623.6455)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Control Sanitario Ambiental</tspan></text>
+				<text transform="matrix(1 0 0 1 1088.7725 623.6455)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Control Sanitario Ambiental</tspan></text>
 			</g>
 	</g>
 	<g id="c8_7" class="cuadroOrganigrama">
 				<rect x="1080.575" y="639.845" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.323"/>
 
-				<rect x="1080.575" y="639.845" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
+				<rect x="1080.575" y="639.845" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1095.9932 648.3057)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1095.9932 648.3057)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1090.4854 654.3057)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Prestadores de Salud y de </tspan></text>
+				<text transform="matrix(1 0 0 1 1090.4854 654.3057)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Prestadores de Salud y de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1087.4805 660.3057)" fill="#3D3D3D" font-size="5">Medicinas Complementarias</text>
+				<text transform="matrix(1 0 0 1 1087.4805 660.3057)" fill="#005B8C" font-size="5">Medicinas Complementarias</text>
 			</g>
 	</g>
 	<g id="c9" class="cuadroOrganigrama">
 				<rect x="1217.189" y="404.556" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="101.22" height="25.323"/>
 
-				<rect x="1217.189" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="101.22" height="25.323"/>
+				<rect x="1217.189" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="101.22" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1225.3389 415.4775)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Departamento de Salud Pública </tspan></text>
+				<text transform="matrix(1 0 0 1 1225.3389 415.4775)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Departamento de Salud Pública </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1235.2012 422.9775)" fill="#3D3D3D" font-size="6" font-weight="bold">y Planiﬁcación Sanitaria</text>
+				<text transform="matrix(1 0 0 1 1235.2012 422.9775)" fill="#005B8C" font-size="6" font-weight="bold">y Planiﬁcación Sanitaria</text>
 			</g>
 	</g>
 	<g id="c9_1" class="cuadroOrganigrama">
 				<rect x="1169.039" y="446.218" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.387" height="25.322"/>
 
-				<rect x="1169.039" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.387" height="25.322"/>
+				<rect x="1169.039" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.387" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1181.2363 457.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Coordinación </tspan></text>
+				<text transform="matrix(1 0 0 1 1181.2363 457.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Coordinación </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1191.6934 463.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Administrativa</tspan></text>
+				<text transform="matrix(1 0 0 1 1191.6934 463.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Administrativa</tspan></text>
 			</g>
 	</g>
 	<g id="c9_6" class="cuadroOrganigrama">
 				<rect x="1289.182" y="598.101" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.322"/>
 
-				<rect x="1289.182" y="598.101" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
+				<rect x="1289.182" y="598.101" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1304.5986 609.5615)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1304.5986 609.5615)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1312.0977 615.5615)" fill="#3D3D3D" font-size="5">Epidemiología</text>
+				<text transform="matrix(1 0 0 1 1312.0977 615.5615)" fill="#005B8C" font-size="5">Epidemiología</text>
 			</g>
 	</g>
 	<g id="c9_7" class="cuadroOrganigrama">
 				<rect x="1289.182" y="631.761" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.323"/>
 
-				<rect x="1289.182" y="631.761" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
+				<rect x="1289.182" y="631.761" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1304.5986 640.2217)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1304.5986 640.2217)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1297.252 646.2217)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Programas y Prioridades en </tspan></text>
+				<text transform="matrix(1 0 0 1 1297.252 646.2217)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Programas y Prioridades en </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1321.6445 652.2217)" fill="#3D3D3D" font-size="5">Salud</text>
+				<text transform="matrix(1 0 0 1 1321.6445 652.2217)" fill="#005B8C" font-size="5">Salud</text>
 			</g>
 	</g>
 	<g id="c9_8" class="cuadroOrganigrama">
 				<rect x="1289.182" y="665.422" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.323"/>
 
-				<rect x="1289.182" y="665.422" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
+				<rect x="1289.182" y="665.422" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1304.5986 673.8828)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1304.5986 673.8828)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1301.1563 679.8828)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Promoción de la Salud y </tspan></text>
+				<text transform="matrix(1 0 0 1 1301.1563 679.8828)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Promoción de la Salud y </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1305.8457 685.8838)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Participación Social</tspan></text>
+				<text transform="matrix(1 0 0 1 1305.8457 685.8838)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Participación Social</tspan></text>
 			</g>
 	</g>
 	<g id="c9_9" class="cuadroOrganigrama">
 				<rect x="1289.182" y="699.083" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.323"/>
 
-				<rect x="1289.182" y="699.083" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
+				<rect x="1289.182" y="699.083" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1304.5986 707.5439)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1304.5986 707.5439)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1302.9854 713.5439)" fill="#3D3D3D" font-size="5">Gestión, Información y </text>
+				<text transform="matrix(1 0 0 1 1302.9854 713.5439)" fill="#005B8C" font-size="5">Gestión, Información y </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1314.3105 719.5439)" fill="#3D3D3D" font-size="5">Estadísticas</text>
+				<text transform="matrix(1 0 0 1 1314.3105 719.5439)" fill="#005B8C" font-size="5">Estadísticas</text>
 			</g>
 	</g>
 	<g id="c9_5" class="cuadroOrganigrama">
 				<rect x="1169.039" y="478.036" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.387" height="25.323"/>
 
-				<rect x="1169.039" y="478.036" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.387" height="25.323"/>
+				<rect x="1169.039" y="478.036" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.387" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1181.7109 489.4971)" fill="#3D3D3D" font-size="5">Unidad de Planiﬁcación </text>
+				<text transform="matrix(1 0 0 1 1181.7109 489.4971)" fill="#005B8C" font-size="5">Unidad de Planiﬁcación </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1197.9287 495.4971)" fill="#3D3D3D" font-size="5">Sanitaria</text>
+				<text transform="matrix(1 0 0 1 1197.9287 495.4971)" fill="#005B8C" font-size="5">Sanitaria</text>
 			</g>
 	</g>
 	<g id="c9_4" class="cuadroOrganigrama">
 				<rect x="1169.039" y="509.855" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.387" height="25.322"/>
 
-				<rect x="1169.039" y="509.855" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.387" height="25.322"/>
+				<rect x="1169.039" y="509.855" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.387" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1179.25 521.3164)" fill="#3D3D3D" font-size="5">Unidad de Comités Éticos </text>
+				<text transform="matrix(1 0 0 1 1179.25 521.3164)" fill="#005B8C" font-size="5">Unidad de Comités Éticos </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1195.9707 527.3164)" fill="#3D3D3D" font-size="5">Cientíﬁcos</text>
+				<text transform="matrix(1 0 0 1 1195.9707 527.3164)" fill="#005B8C" font-size="5">Cientíﬁcos</text>
 			</g>
 	</g>
 	<g id="c9_2" class="cuadroOrganigrama">
 				<rect x="1169.039" y="541.674" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.387" height="25.323"/>
 
-				<rect x="1169.039" y="541.674" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.387" height="25.323"/>
+				<rect x="1169.039" y="541.674" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.387" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1175.8906 556.1348)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Salud Intercultural</tspan></text>
+				<text transform="matrix(1 0 0 1 1175.8906 556.1348)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Salud Intercultural</tspan></text>
 			</g>
 	</g>
 	<g id="c9_3" class="cuadroOrganigrama">
 				<rect x="1169.039" y="573.493" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.387" height="25.322"/>
 
-				<rect x="1169.039" y="573.493" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.387" height="25.322"/>
+				<rect x="1169.039" y="573.493" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.387" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1187.3955 584.9541)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad Técnica de </tspan></text>
+				<text transform="matrix(1 0 0 1 1187.3955 584.9541)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad Técnica de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1184.3135 590.9541)" fill="#3D3D3D" font-size="5">Respuesta al Usuario</text>
+				<text transform="matrix(1 0 0 1 1184.3135 590.9541)" fill="#005B8C" font-size="5">Respuesta al Usuario</text>
 			</g>
 	</g>		
 			<g id="c2" class="cuadroOrganigrama" clip-path="url(#SVGID_4_)">
 				<rect x="876.638" y="145.277" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="66.544" height="12.283"/>
 
-				<rect x="876.638" y="145.277" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="66.544" height="12.283"/>
+				<rect x="876.638" y="145.277" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="66.544" height="12.283"/>
 
-				<text transform="matrix(1 0 0 1 897.8359 153.4292)" fill="#3D3D3D" font-size="6" font-weight="bold">Gabinete</text>
+				<text transform="matrix(1 0 0 1 897.8359 153.4292)" fill="#005B8C" font-size="6" font-weight="bold">Gabinete</text>
 			</g>
 	<g id="c2_2" class="cuadroOrganigrama">
 				<rect x="955.949" y="175.901" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="18.567"/>
 
-				<rect x="955.949" y="175.901" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="18.567"/>
+				<rect x="955.949" y="175.901" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="18.567"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 976.6855 183.9844)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Coordinación </tspan></text>
+				<text transform="matrix(1 0 0 1 976.6855 183.9844)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Coordinación </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 971.042 189.9844)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Mesas Sectoriales</tspan></text>
+				<text transform="matrix(1 0 0 1 971.042 189.9844)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Mesas Sectoriales</tspan></text>
 			</g>
 	</g>
 	<g id="c2_1" class="cuadroOrganigrama">
 				<rect x="788.051" y="175.901" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="69.473" height="18.567"/>
 
-				<rect x="788.051" y="175.901" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="69.473" height="18.567"/>
+				<rect x="788.051" y="175.901" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="69.473" height="18.567"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 808.0322 183.9844)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Coordinación </tspan></text>
+				<text transform="matrix(1 0 0 1 808.0322 183.9844)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Coordinación </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 806.749 189.9844)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Administrativa</tspan></text>
+				<text transform="matrix(1 0 0 1 806.749 189.9844)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Administrativa</tspan></text>
 			</g>
 	</g>
 	<g id="c2_3" class="cuadroOrganigrama">
 				<rect x="788.051" y="203.978" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="18.567"/>
 
-				<rect x="788.051" y="203.978" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="18.567"/>
+				<rect x="788.051" y="203.978" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="18.567"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 810.5371 215.0605)" fill="#3D3D3D" font-size="5">COREPREM</text>
+				<text transform="matrix(1 0 0 1 810.5371 215.0605)" fill="#005B8C" font-size="5">COREPREM</text>
 			</g>
 	</g>
 	<g id="c2_6" class="cuadroOrganigrama">
 				<rect x="955.947" y="203.978" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="18.567"/>
 
-				<rect x="955.947" y="203.978" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="18.567"/>
+				<rect x="955.947" y="203.978" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="18.567"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 963.9824 212.061)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Transparencia </tspan></text>
+				<text transform="matrix(1 0 0 1 963.9824 212.061)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Transparencia </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 984.2275 218.061)" fill="#3D3D3D" font-size="5">y OIRS</text>
+				<text transform="matrix(1 0 0 1 984.2275 218.061)" fill="#005B8C" font-size="5">y OIRS</text>
 			</g>
 	</g>
 	<g id="c2_5" class="cuadroOrganigrama">
 				<rect x="788.051" y="232.054" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="788.051" y="232.054" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="788.051" y="232.054" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 803.2705 243.5146)" fill="#3D3D3D" font-size="5">Unidad de Gestión </text>
+				<text transform="matrix(1 0 0 1 803.2705 243.5146)" fill="#005B8C" font-size="5">Unidad de Gestión </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 795.168 249.5146)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Integral del Riesgo (UGIR)</tspan></text>
+				<text transform="matrix(1 0 0 1 795.168 249.5146)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Integral del Riesgo (UGIR)</tspan></text>
 			</g>
 	</g>
 	<g id="c2_4" class="cuadroOrganigrama">
 				<rect x="955.947" y="232.055" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="955.947" y="232.055" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="955.947" y="232.055" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 980.3164 240.5161)" fill="#3D3D3D" font-size="5">Unidad de </text>
+				<text transform="matrix(1 0 0 1 980.3164 240.5161)" fill="#005B8C" font-size="5">Unidad de </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 979.293 246.5156)" fill="#3D3D3D" font-size="5">Relaciones </text>
+				<text transform="matrix(1 0 0 1 979.293 246.5156)" fill="#005B8C" font-size="5">Relaciones </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 980.5449 252.5156)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Laborales</tspan></text>
+				<text transform="matrix(1 0 0 1 980.5449 252.5156)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Laborales</tspan></text>
 			</g>
 	</g>
 	<g id="c2_7" class="cuadroOrganigrama">
 				<rect x="788.051" y="266.885" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="788.051" y="266.885" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="788.051" y="266.885" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 812.4199 278.3467)" fill="#3D3D3D" font-size="5">Unidad de </text>
+				<text transform="matrix(1 0 0 1 812.4199 278.3467)" fill="#005B8C" font-size="5">Unidad de </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 810.8232 284.3467)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Inversiones</tspan></text>
+				<text transform="matrix(1 0 0 1 810.8232 284.3467)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Inversiones</tspan></text>
 			</g>
 	</g>
 	<g id="c2_9" class="cuadroOrganigrama">
 				<rect x="955.947" y="266.887" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="955.947" y="266.887" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="955.947" y="266.887" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 964.6123 275.3486)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdpto. Determinantes </tspan></text>
+				<text transform="matrix(1 0 0 1 964.6123 275.3486)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdpto. Determinantes </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 967.3457 281.3486)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Sociales y Equidad en </tspan></text>
+				<text transform="matrix(1 0 0 1 967.3457 281.3486)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Sociales y Equidad en </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 985.2109 287.3486)" fill="#3D3D3D" font-size="5">Salud</text>
+				<text transform="matrix(1 0 0 1 985.2109 287.3486)" fill="#005B8C" font-size="5">Salud</text>
 			</g>
 	</g>
 	<g id="c2_9_1" class="cuadroOrganigrama">
 				<rect x="978.184" y="311.543" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="978.184" y="311.543" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="978.184" y="311.543" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 993.4023 323.0039)" fill="#3D3D3D" font-size="5">Unidad de Gestión </text>
+				<text transform="matrix(1 0 0 1 993.4023 323.0039)" fill="#005B8C" font-size="5">Unidad de Gestión </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 999.9072 329.0039)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Intersectorial</tspan></text>
+				<text transform="matrix(1 0 0 1 999.9072 329.0039)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Intersectorial</tspan></text>
 			</g>
 	</g>
 	<g id="c2_9_2" class="cuadroOrganigrama">
 				<rect x="978.184" y="346.292" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="978.184" y="346.292" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="978.184" y="346.292" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1002.5518 354.7539)" fill="#3D3D3D" font-size="5">Unidad de </text>
+				<text transform="matrix(1 0 0 1 1002.5518 354.7539)" fill="#005B8C" font-size="5">Unidad de </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 999.0449 360.7539)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Participación </tspan></text>
+				<text transform="matrix(1 0 0 1 999.0449 360.7539)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Participación </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1006.8945 366.7539)" fill="#3D3D3D" font-size="5">Social</text>
+				<text transform="matrix(1 0 0 1 1006.8945 366.7539)" fill="#005B8C" font-size="5">Social</text>
 			</g>
 	</g>
 	<g id="c2_8" class="cuadroOrganigrama">
 				<rect x="788.051" y="301.054" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="788.051" y="301.054" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="788.051" y="301.054" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 803.2705 312.5146)" fill="#3D3D3D" font-size="5">Comité de Asuntos</text>
+				<text transform="matrix(1 0 0 1 803.2705 312.5146)" fill="#005B8C" font-size="5">Comité de Asuntos</text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 811.7539 318.5146)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Cientificos</tspan></text>
+				<text transform="matrix(1 0 0 1 811.7539 318.5146)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Cientificos</tspan></text>
 			</g>
 	</g>	
 			<g id="c1" class="cuadroOrganigrama" clip-path="url(#SVGID_4_)">
 				<rect x="718.886" y="92.651" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="96.709" height="29.386" />
 
-				<rect x="718.886" y="92.651" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="96.709" height="29.386" />
+				<rect x="718.886" y="92.651" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="96.709" height="29.386" />
 
-				<text transform="matrix(1 0 0 1 737.9209 101.6895)"><tspan x="0" y="0" fill="#3D3D3D" font-size="7" font-weight="bold">SEREMI DE SALUD </tspan></text>
+				<text transform="matrix(1 0 0 1 737.9209 101.6895)"><tspan x="0" y="0" fill="#005B8C" font-size="7" font-weight="bold">SEREMI DE SALUD </tspan></text>
 
-				<text transform="matrix(1 0 0 1 754.752 109.9395)" fill="#3D3D3D" font-size="7" font-weight="bold">REGIÓN </text>
+				<text transform="matrix(1 0 0 1 754.752 109.9395)" fill="#005B8C" font-size="7" font-weight="bold">REGIÓN </text>
 
-				<text transform="matrix(1 0 0 1 738.6592 118.1895)"><tspan x="0" y="0" fill="#3D3D3D" font-size="7" font-weight="bold">METROPOLITANA</tspan></text>
+				<text transform="matrix(1 0 0 1 738.6592 118.1895)"><tspan x="0" y="0" fill="#005B8C" font-size="7" font-weight="bold">METROPOLITANA</tspan></text>
 			</g>
 	<g id="c1_1" class="cuadroOrganigrama">
 				<rect x="643.181" y="143.742" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="75.708" height="15.354"/>
 
-				<rect x="643.181" y="143.742" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="75.708" height="15.354"/>
+				<rect x="643.181" y="143.742" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="75.708" height="15.354"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 667.5361 149.6792)" fill="#3D3D3D" font-size="6" font-weight="bold">Unidad de </text>
+				<text transform="matrix(1 0 0 1 667.5361 149.6792)" fill="#005B8C" font-size="6" font-weight="bold">Unidad de </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 658.3574 157.1797)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Auditoría Interna</tspan></text>
+				<text transform="matrix(1 0 0 1 658.3574 157.1797)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Auditoría Interna</tspan></text>
 			</g>
 	</g>
 	<g id="c1_2" class="cuadroOrganigrama">
 				<rect x="643.187" y="172.858" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="75.709" height="15.354"/>
 
-				<rect x="643.187" y="172.858" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="75.709" height="15.354"/>
+				<rect x="643.187" y="172.858" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="75.709" height="15.354"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 659.7988 178.7949)" fill="#3D3D3D" font-size="6" font-weight="bold">Consejo Asesor </text>
+				<text transform="matrix(1 0 0 1 659.7988 178.7949)" fill="#005B8C" font-size="6" font-weight="bold">Consejo Asesor </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 660.4629 186.2954)" fill="#3D3D3D" font-size="6" font-weight="bold">Regional (CAR)</text>
+				<text transform="matrix(1 0 0 1 660.4629 186.2954)" fill="#005B8C" font-size="6" font-weight="bold">Regional (CAR)</text>
 			</g>
 	</g>
 	<g id="c10" class="cuadroOrganigrama">
 				<rect x="1377.646" y="404.556" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="101.221" height="25.323"/>
 
-				<rect x="1377.646" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="101.221" height="25.323"/>
+				<rect x="1377.646" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="101.221" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1387.0488 415.4775)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Departamento Fortalecimiento </tspan></text>
+				<text transform="matrix(1 0 0 1 1387.0488 415.4775)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Departamento Fortalecimiento </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1410.6523 422.9775)" fill="#3D3D3D" font-size="6" font-weight="bold">de la Gestión</text>
+				<text transform="matrix(1 0 0 1 1410.6523 422.9775)" fill="#005B8C" font-size="6" font-weight="bold">de la Gestión</text>
 			</g>
 	</g>
 	<g id="c10_1" class="cuadroOrganigrama">
 				<rect x="1449.638" y="446.218" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.322"/>
 
-				<rect x="1449.638" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
+				<rect x="1449.638" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1465.0557 457.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1465.0557 457.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1467.7422 463.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Control de Gestión</tspan></text>
+				<text transform="matrix(1 0 0 1 1467.7422 463.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Control de Gestión</tspan></text>
 			</g>
 	</g>
 	<g id="c10_2" class="cuadroOrganigrama">
 				<rect x="1449.638" y="479.441" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.323"/>
 
-				<rect x="1449.638" y="479.441" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
+				<rect x="1449.638" y="479.441" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1465.0557 487.9023)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1465.0557 487.9023)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1460.4443 493.9033)" fill="#3D3D3D" font-size="5">Calidad y Seguridad en la </text>
+				<text transform="matrix(1 0 0 1 1460.4443 493.9033)" fill="#005B8C" font-size="5">Calidad y Seguridad en la </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1474.8809 499.9033)" fill="#3D3D3D" font-size="5">Información</text>
+				<text transform="matrix(1 0 0 1 1474.8809 499.9033)" fill="#005B8C" font-size="5">Información</text>
 			</g>
 	</g>
 	<g id="c10_3" class="cuadroOrganigrama">
 				<rect x="1449.638" y="512.665" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="77.386" height="25.323"/>
 
-				<rect x="1449.638" y="512.665" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
+				<rect x="1449.638" y="512.665" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="77.386" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1465.0557 524.126)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1465.0557 524.126)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1459.7988 530.126)" fill="#3D3D3D" font-size="5">Planiﬁcación Institucional</text>
+				<text transform="matrix(1 0 0 1 1459.7988 530.126)" fill="#005B8C" font-size="5">Planiﬁcación Institucional</text>
 			</g>
 	</g>
 	<g id="c5" class="cuadroOrganigrama">
 				<rect x="417.457" y="404.556" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="83.338" height="25.323"/>
 
-				<rect x="417.457" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="83.338" height="25.323"/>
+				<rect x="417.457" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="83.338" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 435.8438 411.7275)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Departamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 435.8438 411.7275)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Departamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 434.3887 419.2275)" fill="#3D3D3D" font-size="6" font-weight="bold">Comunicaciones y </text>
+				<text transform="matrix(1 0 0 1 434.3887 419.2275)" fill="#005B8C" font-size="6" font-weight="bold">Comunicaciones y </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 431.9297 426.7275)" fill="#3D3D3D" font-size="6" font-weight="bold">Relaciones Públicas</text>
+				<text transform="matrix(1 0 0 1 431.9297 426.7275)" fill="#005B8C" font-size="6" font-weight="bold">Relaciones Públicas</text>
 			</g>
 	</g>
 	<g id="c5_2" class="cuadroOrganigrama">
 				<rect x="474.331" y="446.218" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="474.331" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="474.331" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 488.6543 460.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad Area Digital</tspan></text>
+				<text transform="matrix(1 0 0 1 488.6543 460.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad Area Digital</tspan></text>
 			</g>
 	</g>
 	<g id="c5_4" class="cuadroOrganigrama">
 				<rect x="474.331" y="496.846" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="474.331" y="496.846" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="474.331" y="496.846" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 485.9365 508.3066)" fill="#3D3D3D" font-size="5">Unidad de Relaciones </text>
+				<text transform="matrix(1 0 0 1 485.9365 508.3066)" fill="#005B8C" font-size="5">Unidad de Relaciones </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 500.9141 514.3066)" fill="#3D3D3D" font-size="5">Púbicas</text>
+				<text transform="matrix(1 0 0 1 500.9141 514.3066)" fill="#005B8C" font-size="5">Púbicas</text>
 			</g>
 	</g>
 	<g id="c5_3" class="cuadroOrganigrama">
 				<rect x="474.331" y="547.474" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="474.331" y="547.474" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="474.331" y="547.474" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 498.7002 558.9346)" fill="#3D3D3D" font-size="5">Unidad de </text>
+				<text transform="matrix(1 0 0 1 498.7002 558.9346)" fill="#005B8C" font-size="5">Unidad de </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 481.5625 564.9346)" fill="#3D3D3D" font-size="5">Comunicaciones Internas</text>
+				<text transform="matrix(1 0 0 1 481.5625 564.9346)" fill="#005B8C" font-size="5">Comunicaciones Internas</text>
 			</g>
 	</g>
 	<g id="c5_1" class="cuadroOrganigrama">
 				<rect x="474.331" y="598.101" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="474.331" y="598.101" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="474.331" y="598.101" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 498.7002 606.5615)" fill="#3D3D3D" font-size="5">Unidad de </text>
+				<text transform="matrix(1 0 0 1 498.7002 606.5615)" fill="#005B8C" font-size="5">Unidad de </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 491.2412 612.5615)" fill="#3D3D3D" font-size="5">Comunicaciones </text>
+				<text transform="matrix(1 0 0 1 491.2412 612.5615)" fill="#005B8C" font-size="5">Comunicaciones </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 500.1621 618.5615)" fill="#3D3D3D" font-size="5">Externas</text>
+				<text transform="matrix(1 0 0 1 500.1621 618.5615)" fill="#005B8C" font-size="5">Externas</text>
 			</g>
 	</g>
 	<g id="c4" class="cuadroOrganigrama">
 				<rect x="278.52" y="404.556" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="83.338" height="25.323"/>
 
-				<rect x="278.52" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="83.338" height="25.323"/>
+				<rect x="278.52" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="83.338" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 296.9063 411.7275)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Departamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 296.9063 411.7275)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Departamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 297.4072 419.2275)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Administración y </tspan></text>
+				<text transform="matrix(1 0 0 1 297.4072 419.2275)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Administración y </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 308.1035 426.7275)" fill="#3D3D3D" font-size="6" font-weight="bold">Finanzas</text>
+				<text transform="matrix(1 0 0 1 308.1035 426.7275)" fill="#005B8C" font-size="6" font-weight="bold">Finanzas</text>
 			</g>
 	</g>
 	<g id="c4_9" class="cuadroOrganigrama">
 				<rect x="335.394" y="473.562" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="335.394" y="473.562" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="335.394" y="473.562" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 350.959 485.0225)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento </tspan></text>
+				<text transform="matrix(1 0 0 1 350.959 485.0225)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 347.7021 491.0225)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Atención de Usuarios</tspan></text>
+				<text transform="matrix(1 0 0 1 347.7021 491.0225)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Atención de Usuarios</tspan></text>
 			</g>
 	</g>
 	<g id="c4_5" class="cuadroOrganigrama">
 				<rect x="335.394" y="505.496" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="335.394" y="505.496" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="335.394" y="505.496" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 350.959 510.958)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento </tspan></text>
+				<text transform="matrix(1 0 0 1 350.959 510.958)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 351.4668 516.957)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Tecnologías de la </tspan></text>
+				<text transform="matrix(1 0 0 1 351.4668 516.957)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Tecnologías de la </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 355.6367 522.957)" fill="#3D3D3D" font-size="5">Información y </text>
+				<text transform="matrix(1 0 0 1 355.6367 522.957)" fill="#005B8C" font-size="5">Información y </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 352.3037 528.957)" fill="#3D3D3D" font-size="5">Comunicaciones</text>
+				<text transform="matrix(1 0 0 1 352.3037 528.957)" fill="#005B8C" font-size="5">Comunicaciones</text>
 			</g>
 	</g>
 	<g id="c4_6" class="cuadroOrganigrama">
 				<rect x="335.394" y="537.431" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="335.394" y="537.431" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="335.394" y="537.431" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 347.6113 548.8916)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 347.6113 548.8916)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 351.5811 554.8916)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Partes y Archivos</tspan></text>
+				<text transform="matrix(1 0 0 1 351.5811 554.8916)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Partes y Archivos</tspan></text>
 			</g>
 	</g>
 	<g id="c4_2" class="cuadroOrganigrama">
 				<rect x="335.394" y="569.365" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="335.394" y="569.365" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="335.394" y="569.365" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 347.6113 577.8262)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 347.6113 577.8262)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 345.2617 583.8262)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Gestión y Desarrollo de </tspan></text>
+				<text transform="matrix(1 0 0 1 345.2617 583.8262)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Gestión y Desarrollo de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 360.4268 589.8262)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Personas</tspan></text>
+				<text transform="matrix(1 0 0 1 360.4268 589.8262)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Personas</tspan></text>
 			</g>
 	</g>
 	<g id="c4_1" class="cuadroOrganigrama">
 				<rect x="235.087" y="446.218" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="235.087" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="235.087" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 249.8418 457.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Apoyo a </tspan></text>
+				<text transform="matrix(1 0 0 1 249.8418 457.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Apoyo a </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 259.4648 463.6787)" fill="#3D3D3D" font-size="5">la Gestión</text>
+				<text transform="matrix(1 0 0 1 259.4648 463.6787)" fill="#005B8C" font-size="5">la Gestión</text>
 			</g>
 	</g>
 	<g id="c4_7" class="cuadroOrganigrama">
 				<rect x="335.394" y="601.3" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="335.394" y="601.3" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="335.394" y="601.3" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 347.6113 612.7607)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 347.6113 612.7607)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 349.0693 618.7607)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Servicios Generales</tspan></text>
+				<text transform="matrix(1 0 0 1 349.0693 618.7607)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Servicios Generales</tspan></text>
 			</g>
 	</g>
 	<g id="c4_8" class="cuadroOrganigrama">
 				<rect x="335.394" y="633.234" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="335.394" y="633.234" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="335.394" y="633.234" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 350.959 644.6953)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento </tspan></text>
+				<text transform="matrix(1 0 0 1 350.959 644.6953)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 353.6191 650.6953)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">de Movilización</tspan></text>
+				<text transform="matrix(1 0 0 1 353.6191 650.6953)"><tspan x="0" y="0" fill="#005B8C" font-size="5">de Movilización</tspan></text>
 			</g>
 	</g>
 	<g id="c4_4" class="cuadroOrganigrama">
 				<rect x="335.394" y="665.168" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="335.394" y="665.168" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="335.394" y="665.168" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 350.959 676.6299)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento </tspan></text>
+				<text transform="matrix(1 0 0 1 350.959 676.6299)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 350.1064 682.6299)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">de Abastecimiento</tspan></text>
+				<text transform="matrix(1 0 0 1 350.1064 682.6299)"><tspan x="0" y="0" fill="#005B8C" font-size="5">de Abastecimiento</tspan></text>
 			</g>
 	</g>
 	<g id="c4_3" class="cuadroOrganigrama">
 				<rect x="335.394" y="697.103" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="335.394" y="697.103" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="335.394" y="697.103" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 350.959 708.5635)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento </tspan></text>
+				<text transform="matrix(1 0 0 1 350.959 708.5635)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 357.5576 714.5635)" fill="#3D3D3D" font-size="5">de Finanzas</text>
+				<text transform="matrix(1 0 0 1 357.5576 714.5635)" fill="#005B8C" font-size="5">de Finanzas</text>
 			</g>
 	</g>
 	<g id="c11" class="cuadroOrganigrama">
 				<rect x="1594.977" y="404.556" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="1594.977" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="1594.977" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1607.1855 415.4775)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Departamento de </tspan></text>
+				<text transform="matrix(1 0 0 1 1607.1855 415.4775)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Departamento de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1606.125 422.9775)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Gestión Territorial</tspan></text>
+				<text transform="matrix(1 0 0 1 1606.125 422.9775)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Gestión Territorial</tspan></text>
 			</g>
 	</g>
 	<g id="c11_1" class="cuadroOrganigrama">
 				<rect x="1538.103" y="446.218" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="1538.103" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="1538.103" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1547.0986 457.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Coordinación</tspan></text>
+				<text transform="matrix(1 0 0 1 1547.0986 457.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Coordinación</tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1557.5557 463.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Administrativa</tspan></text>
+				<text transform="matrix(1 0 0 1 1557.5557 463.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Administrativa</tspan></text>
 			</g>
 	</g>
 	<g id="c11_4" class="cuadroOrganigrama">
 				<rect x="1538.103" y="479.442" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="1538.103" y="479.442" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="1538.103" y="479.442" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1553.0723 490.9023)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Eventos </tspan></text>
+				<text transform="matrix(1 0 0 1 1553.0723 490.9023)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Eventos </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1564.2627 496.9033)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Masivos</tspan></text>
+				<text transform="matrix(1 0 0 1 1564.2627 496.9033)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Masivos</tspan></text>
 			</g>
 	</g>
 	<g id="c11_2" class="cuadroOrganigrama">
 				<rect x="1538.103" y="512.666" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="1538.103" y="512.666" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="1538.103" y="512.666" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1547.0986 524.1279)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Coordinación </tspan></text>
+				<text transform="matrix(1 0 0 1 1547.0986 524.1279)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Coordinación </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1562.7793 530.1279)" fill="#3D3D3D" font-size="5">Municipal</text>
+				<text transform="matrix(1 0 0 1 1562.7793 530.1279)" fill="#005B8C" font-size="5">Municipal</text>
 			</g>
 	</g>
 	<g id="c11_3" class="cuadroOrganigrama">
 				<rect x="1538.103" y="545.891" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="1538.103" y="545.891" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="1538.103" y="545.891" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1547.0986 554.3516)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Coordinación </tspan></text>
+				<text transform="matrix(1 0 0 1 1547.0986 554.3516)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Coordinación </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1546.626 560.3516)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">de Servicios y Proyectos </tspan></text>
+				<text transform="matrix(1 0 0 1 1546.626 560.3516)"><tspan x="0" y="0" fill="#005B8C" font-size="5">de Servicios y Proyectos </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1564.0479 566.3516)" fill="#3D3D3D" font-size="5">en Salud</text>
+				<text transform="matrix(1 0 0 1 1564.0479 566.3516)" fill="#005B8C" font-size="5">en Salud</text>
 			</g>
 	</g>
 	<g id="c11_5" class="cuadroOrganigrama">
 				<rect x="1651.858" y="446.218" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="1651.858" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="1651.858" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1667.4238 457.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subdepartamento </tspan></text>
+				<text transform="matrix(1 0 0 1 1667.4238 457.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subdepartamento </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1664.2217 463.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Oﬁcinas Provinciales</tspan></text>
+				<text transform="matrix(1 0 0 1 1664.2217 463.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Oﬁcinas Provinciales</tspan></text>
 			</g>
 	</g>
 	<g id="c11_5_1" class="cuadroOrganigrama">
 				<rect x="1687.297" y="490.698" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="1687.297" y="490.698" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="1687.297" y="490.698" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1708.0332 502.1592)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Coordinación </tspan></text>
+				<text transform="matrix(1 0 0 1 1708.0332 502.1592)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Coordinación </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1697.3516 508.1592)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Técnico-Administrativa</tspan></text>
+				<text transform="matrix(1 0 0 1 1697.3516 508.1592)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Técnico-Administrativa</tspan></text>
 			</g>
 	</g>
 	<g id="c11_5_3" class="cuadroOrganigrama">
 				<rect x="1687.297" y="523.934" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="1687.297" y="523.934" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="1687.297" y="523.934" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1695.9727 538.3955)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Oﬁcina Provincial Maipo</tspan></text>
+				<text transform="matrix(1 0 0 1 1695.9727 538.3955)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Oﬁcina Provincial Maipo</tspan></text>
 			</g>
 	</g>
 	<g id="c11_5_4" class="cuadroOrganigrama">
 				<rect x="1687.297" y="557.17" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="1687.297" y="557.17" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="1687.297" y="557.17" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1703.5566 568.6318)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Oﬁcina Provincial </tspan></text>
+				<text transform="matrix(1 0 0 1 1703.5566 568.6318)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Oﬁcina Provincial </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1713.5 574.6318)" fill="#3D3D3D" font-size="5">Melipilla</text>
+				<text transform="matrix(1 0 0 1 1713.5 574.6318)" fill="#005B8C" font-size="5">Melipilla</text>
 			</g>
 	</g>
 	<g id="c11_5_6" class="cuadroOrganigrama">
 				<rect x="1687.297" y="590.406" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="1687.297" y="590.406" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="1687.297" y="590.406" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1703.5566 601.8672)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Oﬁcina Provincial </tspan></text>
+				<text transform="matrix(1 0 0 1 1703.5566 601.8672)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Oﬁcina Provincial </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1711.8428 607.8672)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Talagante</tspan></text>
+				<text transform="matrix(1 0 0 1 1711.8428 607.8672)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Talagante</tspan></text>
 			</g>
 	</g>
 	<g id="c11_5_5" class="cuadroOrganigrama">
 				<rect x="1687.297" y="623.643" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="1687.297" y="623.643" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="1687.297" y="623.643" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1703.5566 635.1035)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Oﬁcina Provincial </tspan></text>
+				<text transform="matrix(1 0 0 1 1703.5566 635.1035)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Oﬁcina Provincial </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1710.2598 641.1035)" fill="#3D3D3D" font-size="5">Chacabuco</text>
+				<text transform="matrix(1 0 0 1 1710.2598 641.1035)" fill="#005B8C" font-size="5">Chacabuco</text>
 			</g>
 	</g>
 	<g id="c11_5_2" class="cuadroOrganigrama">
 				<rect x="1687.297" y="656.879" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="1687.297" y="656.879" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="1687.297" y="656.879" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1703.5566 668.3398)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Oﬁcina Provincial </tspan></text>
+				<text transform="matrix(1 0 0 1 1703.5566 668.3398)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Oﬁcina Provincial </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 1712.2188 674.3389)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Cordillera</tspan></text>
+				<text transform="matrix(1 0 0 1 1712.2188 674.3389)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Cordillera</tspan></text>
 			</g>
 	</g>
 	<g id="c3" class="cuadroOrganigrama">
 				<rect x="96.15" y="404.556" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="83.338" height="25.323"/>
 
-				<rect x="96.15" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="83.338" height="25.323"/>
+				<rect x="96.15" y="404.556" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="83.338" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 107.8628 415.4775)" fill="#3D3D3D" font-size="6" font-weight="bold">Comisión de Medicina </text>
+				<text transform="matrix(1 0 0 1 107.8628 415.4775)" fill="#005B8C" font-size="6" font-weight="bold">Comisión de Medicina </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 123.5044 422.9775)"><tspan x="0" y="0" fill="#3D3D3D" font-size="6" font-weight="bold">Preventiva</tspan></text>
+				<text transform="matrix(1 0 0 1 123.5044 422.9775)"><tspan x="0" y="0" fill="#005B8C" font-size="6" font-weight="bold">Preventiva</tspan></text>
 			</g>
 	</g>
 	<g id="c3_11" class="cuadroOrganigrama">
 				<rect x="153.024" y="446.218" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="153.024" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="153.024" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 174.041 457.6787)" fill="#3D3D3D" font-size="5">Subcomisión </text>
+				<text transform="matrix(1 0 0 1 174.041 457.6787)" fill="#005B8C" font-size="5">Subcomisión </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 180.5117 463.6787)" fill="#3D3D3D" font-size="5">Oriente</text>
+				<text transform="matrix(1 0 0 1 180.5117 463.6787)" fill="#005B8C" font-size="5">Oriente</text>
 			</g>
 	</g>
 	<g id="c3_10" class="cuadroOrganigrama">
 				<rect x="153.024" y="477.577" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="153.024" y="477.577" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="153.024" y="477.577" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 163.6206 492.0381)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subcomisión Poniente</tspan></text>
+				<text transform="matrix(1 0 0 1 163.6206 492.0381)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subcomisión Poniente</tspan></text>
 			</g>
 	</g>
 	<g id="c3_14" class="cuadroOrganigrama">
 				<rect x="153.024" y="508.938" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="153.024" y="508.938" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="153.024" y="508.938" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 167.1768 523.3994)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Subcomisión Norte</tspan></text>
+				<text transform="matrix(1 0 0 1 167.1768 523.3994)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Subcomisión Norte</tspan></text>
 			</g>
 	</g>
 	<g id="c3_13" class="cuadroOrganigrama">
 				<rect x="153.024" y="540.363" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="153.024" y="540.363" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="153.024" y="540.363" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 161.1001 554.8242)" fill="#3D3D3D" font-size="5">Subcomisión Sur Oriente</text>
+				<text transform="matrix(1 0 0 1 161.1001 554.8242)" fill="#005B8C" font-size="5">Subcomisión Sur Oriente</text>
 			</g>
 	</g>
 	<g id="c3_2" class="cuadroOrganigrama">
 				<rect x="52.717" y="446.218" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="52.717" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="52.717" y="446.218" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 73.4531 457.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Coordinación </tspan></text>
+				<text transform="matrix(1 0 0 1 73.4531 457.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Coordinación </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 72.1699 463.6787)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Administrativa</tspan></text>
+				<text transform="matrix(1 0 0 1 72.1699 463.6787)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Administrativa</tspan></text>
 			</g>
 	</g>
 	<g id="c3_12" class="cuadroOrganigrama">
 				<rect x="153.024" y="571.658" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="153.024" y="571.658" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="153.024" y="571.658" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 169.7217 586.1191)" fill="#3D3D3D" font-size="5">Subcomisión Sur</text>
+				<text transform="matrix(1 0 0 1 169.7217 586.1191)" fill="#005B8C" font-size="5">Subcomisión Sur</text>
 			</g>
 	</g>
 	<g id="c3_6" class="cuadroOrganigrama">
 				<rect x="52.717" y="477.578" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="52.717" y="477.578" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="52.717" y="477.578" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 67.168 489.0391)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Contraloría Médica </tspan></text>
+				<text transform="matrix(1 0 0 1 67.168 489.0391)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Contraloría Médica </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 74.3438 495.0391)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Centralizada</tspan></text>
+				<text transform="matrix(1 0 0 1 74.3438 495.0391)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Centralizada</tspan></text>
 			</g>
 	</g>
 	<g id="c3_3" class="cuadroOrganigrama">
 				<rect x="52.717" y="508.938" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="52.717" y="508.938" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="52.717" y="508.938" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 73.1709 520.3994)" fill="#3D3D3D" font-size="5">Discapacidad </text>
+				<text transform="matrix(1 0 0 1 73.1709 520.3994)" fill="#005B8C" font-size="5">Discapacidad </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 74.3438 526.3994)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Centralizada</tspan></text>
+				<text transform="matrix(1 0 0 1 74.3438 526.3994)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Centralizada</tspan></text>
 			</g>
 	</g>
 	<g id="c3_7" class="cuadroOrganigrama">
 				<rect x="52.717" y="540.3" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="52.717" y="540.3" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="52.717" y="540.3" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 60.4951 551.7607)" fill="#3D3D3D" font-size="5">Unidad de Comunicación </text>
+				<text transform="matrix(1 0 0 1 60.4951 551.7607)" fill="#005B8C" font-size="5">Unidad de Comunicación </text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 76.3359 557.7607)" fill="#3D3D3D" font-size="5">Ciudadana</text>
+				<text transform="matrix(1 0 0 1 76.3359 557.7607)" fill="#005B8C" font-size="5">Ciudadana</text>
 			</g>
 	</g>
 	<g id="c3_1" class="cuadroOrganigrama">
 				<rect x="52.717" y="571.66" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="52.717" y="571.66" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="52.717" y="571.66" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 70.9238 586.1211)" fill="#3D3D3D" font-size="5">Unidad Jurídica</text>
+				<text transform="matrix(1 0 0 1 70.9238 586.1211)" fill="#005B8C" font-size="5">Unidad Jurídica</text>
 			</g>
 	</g>
 	<g id="c3_4" class="cuadroOrganigrama">
 				<rect x="52.717" y="603.021" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="52.717" y="603.021" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="52.717" y="603.021" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 62.0117 617.4814)" fill="#3D3D3D" font-size="5">Unidad de Fiscalización</text>
+				<text transform="matrix(1 0 0 1 62.0117 617.4814)" fill="#005B8C" font-size="5">Unidad de Fiscalización</text>
 			</g>
 	</g>
 	<g id="c3_8" class="cuadroOrganigrama">
 				<rect x="52.717" y="634.382" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.322"/>
 
-				<rect x="52.717" y="634.382" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
+				<rect x="52.717" y="634.382" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.322"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 63.2842 645.8428)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Atención de </tspan></text>
+				<text transform="matrix(1 0 0 1 63.2842 645.8428)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Atención de </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 78.4082 651.8428)" fill="#3D3D3D" font-size="5">Usuarios</text>
+				<text transform="matrix(1 0 0 1 78.4082 651.8428)" fill="#005B8C" font-size="5">Usuarios</text>
 			</g>
 	</g>
 	<g id="c3_5" class="cuadroOrganigrama">
 				<rect x="52.717" y="665.742" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="52.717" y="665.742" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="52.717" y="665.742" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 65.5938 680.2031)" fill="#3D3D3D" font-size="5">Unidad de Subsidios</text>
+				<text transform="matrix(1 0 0 1 65.5938 680.2031)" fill="#005B8C" font-size="5">Unidad de Subsidios</text>
 			</g>
 	</g>
 	<g id="c3_9" class="cuadroOrganigrama">
 				<rect x="52.717" y="697.103" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="70.984" height="25.323"/>
 
-				<rect x="52.717" y="697.103" clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
+				<rect x="52.717" y="697.103" clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" width="70.984" height="25.323"/>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 64.9043 708.5635)"><tspan x="0" y="0" fill="#3D3D3D" font-size="5">Unidad de Normativa </tspan></text>
+				<text transform="matrix(1 0 0 1 64.9043 708.5635)"><tspan x="0" y="0" fill="#005B8C" font-size="5">Unidad de Normativa </tspan></text>
 			</g>
 			<g clip-path="url(#SVGID_4_)">
-				<text transform="matrix(1 0 0 1 76.8105 714.5635)" fill="#3D3D3D" font-size="5">Especíﬁca</text>
+				<text transform="matrix(1 0 0 1 76.8105 714.5635)" fill="#005B8C" font-size="5">Especíﬁca</text>
 			</g>
 	</g>
 				<rect x="52.716" y="92.652" opacity="0" clip-path="url(#SVGID_4_)" fill-rule="evenodd" clip-rule="evenodd" width="118.866" height="106.359"/>
@@ -1874,26 +1871,26 @@
 				</clipPath>
 			</g>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1665.943" y1="472.154" x2="1666.059" y2="670.257"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1665.943" y1="472.154" x2="1666.059" y2="670.257"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="320.181" y1="429.885" x2="320.181" y2="710.507"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="320.181" y1="429.885" x2="320.181" y2="710.507"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1630.449" y1="430.635" x2="1630.449" y2="559.304"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1630.449" y1="430.635" x2="1630.449" y2="559.304"/>
 
-				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="648.37" y1="429.871" x2="648.324" y2="611.601"/>
+				<line clip-path="url(#SVGID_4_)" fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="648.37" y1="429.871" x2="648.324" y2="611.601"/>
 		</g>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="850.591" y1="430.629" x2="850.591" y2="611.521"/>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="137.827" y1="429.155" x2="137.333" y2="710.5"/>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="459.118" y1="430.593" x2="459.118" y2="611.484"/>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1267.956" y1="430.23" x2="1267.805" y2="712.484"/>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1428.26" y1="430.627" x2="1428.26" y2="526.083"/>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" x1="909.909" y1="157.561" x2="909.918" y2="313.716"/>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="137.057" y1="385.909" x2="648.374" y2="386.255"/>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="319.333" y1="385.563" x2="319.333" y2="403.864"/>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1059.197" y1="429.871" x2="1059.219" y2="653.25"/>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="850.587" y1="386.209" x2="1631.167" y2="386.212"/>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" x1="767.24" y1="122.037" x2="766.667" y2="386"/>
-	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="959.434" y1="301.136" x2="959.434" y2="359.715"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="850.591" y1="430.629" x2="850.591" y2="611.521"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="137.827" y1="429.155" x2="137.333" y2="710.5"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="459.118" y1="430.593" x2="459.118" y2="611.484"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1267.956" y1="430.23" x2="1267.805" y2="712.484"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1428.26" y1="430.627" x2="1428.26" y2="526.083"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" x1="909.909" y1="157.561" x2="909.918" y2="313.716"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="137.057" y1="385.909" x2="648.374" y2="386.255"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="319.333" y1="385.563" x2="319.333" y2="403.864"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="1059.197" y1="429.871" x2="1059.219" y2="653.25"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="850.587" y1="386.209" x2="1631.167" y2="386.212"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-miterlimit="8" x1="767.24" y1="122.037" x2="766.667" y2="386"/>
+	<line fill="none" stroke="#006196" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="959.434" y1="301.136" x2="959.434" y2="359.715"/>
 <g id="logo">
 	<g>
 		<rect x="138.713" y="61.39" fill="#E83D47" width="79.258" height="121.294"/>
