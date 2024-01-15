@@ -2,6 +2,7 @@
 <head>
 <title>Organigrama Seremi RM (WIP!)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="color-scheme" content="light only">
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script>
 	function ready(fn) {
@@ -130,6 +131,7 @@
 		
 		let datosOrganigrama, datosCuadro;
 		let panel = document.querySelector("#panel");
+		let logo = document.querySelector("#logo");
 
 		function eventoZoom(e) {
 			d3.select('#contenidoOrganigrama')
@@ -137,9 +139,10 @@
 			panel.classList.replace("visible","oculto");
 		}
 
+		let mm = 100;
 		let zoom = d3.zoom()
-			.scaleExtent([1,9])
-			//.translateExtent([[0,0],[1800*9,810*9]])
+			.scaleExtent([1,8])
+			.translateExtent([[-mm,0],[1800+mm,810+0]])
 			.on('zoom',eventoZoom);
 
 		d3.select('#Organigrama_SVG').call(zoom);		
@@ -166,7 +169,9 @@
 					panel.scrollTop = 0;
 				}); 
 			}
-
+			logo.addEventListener('click', () => {
+				document.body.requestFullscreen();
+			});
 		})
 	</script>
 	<div id="panel" class="oculto">
@@ -1878,8 +1883,8 @@
 	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="850.587" y1="386.209" x2="1631.167" y2="386.212"/>
 	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="8" x1="767.24" y1="122.037" x2="766.667" y2="386"/>
 	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="8" x1="959.434" y1="301.136" x2="959.434" y2="359.715"/>
-
-	<g id="who">
+<g id="logo">
+	<g>
 		<rect x="138.713" y="61.39" fill="#E83D47" width="79.258" height="121.294"/>
 	</g>
 	<g>
@@ -3280,6 +3285,7 @@
 			c0-1.035,0.576-1.829,1.654-1.829C180.216,88.524,180.801,89.313,180.801,90.353z M179.838,90.353c0-0.851-0.25-1.144-0.69-1.144
 			s-0.685,0.303-0.685,1.144c0,0.822,0.222,1.153,0.685,1.153C179.611,91.505,179.838,91.194,179.838,90.353z"/>
 	</g>
+</g>
 	</g>
 </svg>
 </body>
