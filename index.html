@@ -20,12 +20,18 @@
 	*::after {
 		box-sizing: border-box;
 	}	
-	::root, body, svg {
-		color-scheme: only light;
+	::root {
+		color-scheme: light only;
 	}
 	::backdrop {
 		background-color: #fff;
 	}
+
+	::selection {
+	  background-color: #0b437f;
+	  color: #E9E9E9;
+	}
+
 	html {
 		color: #222;
 		font-size: 1em;
@@ -58,11 +64,9 @@
 		font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif; 
 		font-weight: 100;
 	}
-
 	h1 {
 		letter-spacing: -0.05em;
 		color: #05203d;
-
 	}
 	h2 {
 		color: #0b437f;
@@ -79,7 +83,8 @@
 		background-color: #E94961;
 		border: 0;
 		height: 2px;
-	}	
+	}
+
 	#contenedor {		
 		width: 100%;
 		height: 100%;
@@ -124,13 +129,13 @@
 	}
 
 	.visible {
+		transition: opacity 200ms;
 		visibility: visible;
-		transition: opacity 600ms;
 		opacity: 1;
 	}
 	.oculto {
+		transition: visibility 200ms, opacity 200ms;
 		visibility: hidden;
-		transition: visibility 0 600ms, opacity 600ms linear;
 		opacity: 0;
 	}	
 </style>
@@ -141,41 +146,51 @@
 		let datosOrganigrama, datosCuadro;
 		let panel = document.querySelector("#panel");
 		let logo = document.querySelector("#logo");
+		let svg = d3.select('#Organigrama_SVG');
 
-		function eventoZoom(e) {
-			d3.select('#contenidoOrganigrama')
-				.attr('transform',e.transform);
-			panel.classList.replace("visible","oculto");
-		}
 
-		let mm = 100;
 		let zoom = d3.zoom()
 			.scaleExtent([1,8])
-			.translateExtent([[-mm,0],[1800+mm,810+0]])
-			.on('zoom',eventoZoom);
+			.translateExtent([[-1800*0.75,-810*0.75],[1800*1.75,810*1.75]])
+			.on('zoom', e => {
+				d3.select('#contenidoOrganigrama')
+					.attr('transform',e.transform);
+				panel.classList.replace("visible","oculto");
+			});
 
-		d3.select('#Organigrama_SVG').call(zoom);		
+		svg.call(zoom);		
 
 		ready(async function() {
 			datosOrganigrama = await d3.csv(urlDatosOrganigrama);
 			
 
 			for (let cuadro of document.querySelectorAll(".cuadroOrganigrama")) {
-
 				let id = cuadro.getAttribute("id");
+				let N = id.replaceAll("_",".").replace("c","");
 				
+
+
 				cuadro.addEventListener('click', () => { 
-					datosCuadro = datosOrganigrama.find((registro) => registro.N == id.replaceAll("_",".").replace("c",""));
-					console.log(document.querySelector(`#${id}`).getBBox());
+					datosCuadro = datosOrganigrama.find((registro) => registro.N == N);
+					/* let cajaCuadro = document.querySelector(`#${id}`).getBBox(); 
+					let centroCuadroX = cajaCuadro.x + cajaCuadro.width / 2;
+					let centroCuadroY = cajaCuadro.y + cajaCuadro.height / 2;
+					console.log(centroCuadroX,centroCuadroY);
+					svg.call(zoom.transform, d3.zoomIdentity.translate(
+							svg.node().clientWidth / 2 - centroCuadroX, 
+							svg.node().clientHeight / 2 - centroCuadroY
+						).scale(4)
+					);
+					console.log(cajaCuadro); */
 					document.querySelector("h1").textContent = datosCuadro.Nombre;
 					document.querySelector("h2").textContent = datosCuadro.Cargo;
 					document.querySelector("h3").textContent = datosCuadro.Estructura;
 					for (let parrafo of panel.querySelectorAll('p')) {
 						parrafo.remove();
 					}
-					panel.classList.replace("oculto","visible");
 					panel.insertAdjacentHTML('beforeend', "<p>" + datosCuadro.Descripción.split("\n").join("</p><p>") + "</p>");
 					panel.scrollTop = 0;
+					panel.classList.replace("oculto","visible");
 				}); 
 			}
 			logo.addEventListener('click', () => {
