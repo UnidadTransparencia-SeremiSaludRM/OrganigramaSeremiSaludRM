@@ -150,7 +150,7 @@
 
 
 		let zoom = d3.zoom()
-			.scaleExtent([1,10])
+			.scaleExtent([1,12])
 			.translateExtent([[-1800*0.75,-810*0.75],[1800*1.75,810*1.75]])
 			.on('zoom', e => {
 				d3.select('#contenidoOrganigrama')
@@ -176,25 +176,29 @@
 					let cajaCuadro = document.querySelector(`#${id}`).getBBox(); 
 					let centroCuadroX = cajaCuadro.x + cajaCuadro.width / 2;
 					let centroCuadroY = cajaCuadro.y + cajaCuadro.height / 2;
+					let fx,fy,fz;
 					
 					document.querySelector("h1").textContent = datosCuadro.Nombre;
 					document.querySelector("h2").textContent = datosCuadro.Cargo;
 					document.querySelector("h3").textContent = datosCuadro.Estructura;
+
 					for (let parrafo of panel.querySelectorAll('p')) {
 						parrafo.remove();
 					}
 					panel.insertAdjacentHTML('beforeend', "<p>" + datosCuadro.Descripción.split("\n").join("</p><p>") + "</p>");
 					panel.scrollTop = 0;
 
+					[fx,fy,fz] = window.matchMedia("(orientation: landscape)").matches ? [4,2,8] : [2,4,12];
+
 					svg.transition().duration(500).call(zoom.transform,
 					 d3.zoomIdentity
-					 	.translate(1800/4,810/2)
-					 	.scale(8)
+					 	.translate(1800/fx,810/fy)
+					 	.scale(fz)
 					 	.translate(
 							-centroCuadroX, 
 							-centroCuadroY, 
 						)
-						
+
 					).on("end", () => panel.classList.replace("oculto","visible") );
 
 
