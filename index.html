@@ -181,7 +181,7 @@
 					
 					[fx,fy,fz] = window.matchMedia("(orientation: landscape)").matches ? [4,2,8] : [2,4,12];
 
-					svg.transition().duration(500).call(zoom.transform,
+					svg.transition().duration(600).call(zoom.transform,
 					 d3.zoomIdentity
 					 	.translate(1800/fx,810/fy)
 					 	.scale(fz)
