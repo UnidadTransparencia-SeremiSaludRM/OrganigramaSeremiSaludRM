@@ -172,22 +172,13 @@
 
 				cuadro.addEventListener('click', (e) => { 
 					event.stopPropagation();
+					panel.classList.replace("visible","oculto");
 					datosCuadro = datosOrganigrama.find((registro) => registro.N == Numeral);
 					let cajaCuadro = document.querySelector(`#${id}`).getBBox(); 
 					let centroCuadroX = cajaCuadro.x + cajaCuadro.width / 2;
 					let centroCuadroY = cajaCuadro.y + cajaCuadro.height / 2;
 					let fx,fy,fz;
 					
-					document.querySelector("h1").textContent = datosCuadro.Nombre;
-					document.querySelector("h2").textContent = datosCuadro.Cargo;
-					document.querySelector("h3").textContent = datosCuadro.Estructura;
-
-					for (let parrafo of panel.querySelectorAll('p')) {
-						parrafo.remove();
-					}
-					panel.insertAdjacentHTML('beforeend', "<p>" + datosCuadro.Descripción.split("\n").join("</p><p>") + "</p>");
-					panel.scrollTop = 0;
-
 					[fx,fy,fz] = window.matchMedia("(orientation: landscape)").matches ? [4,2,8] : [2,4,12];
 
 					svg.transition().duration(500).call(zoom.transform,
@@ -199,7 +190,18 @@
 							-centroCuadroY, 
 						)
 
-					).on("end", () => panel.classList.replace("oculto","visible") );
+					).on("end", () => {
+						document.querySelector("h1").textContent = datosCuadro.Nombre;
+						document.querySelector("h2").textContent = datosCuadro.Cargo;
+						document.querySelector("h3").textContent = datosCuadro.Estructura;
+
+						for (let parrafo of panel.querySelectorAll('p')) {
+							parrafo.remove();
+						}
+						panel.insertAdjacentHTML('beforeend', "<p>" + datosCuadro.Descripción.split("\n").join("</p><p>") + "</p>");
+						panel.scrollTop = 0;
+						panel.classList.replace("oculto","visible") 
+					});
 
 
 					
