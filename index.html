@@ -150,7 +150,7 @@
 
 
 		let zoom = d3.zoom()
-			.scaleExtent([1,8])
+			.scaleExtent([1,10])
 			.translateExtent([[-1800*0.75,-810*0.75],[1800*1.75,810*1.75]])
 			.on('zoom', e => {
 				d3.select('#contenidoOrganigrama')
@@ -166,22 +166,17 @@
 
 			for (let cuadro of document.querySelectorAll(".cuadroOrganigrama")) {
 				let id = cuadro.getAttribute("id");
-				let N = id.replaceAll("_",".").replace("c","");
+				let Numeral = id.replaceAll("_",".").replace("c","");
 				
 
 
-				cuadro.addEventListener('click', () => { 
-					datosCuadro = datosOrganigrama.find((registro) => registro.N == N);
-					/* let cajaCuadro = document.querySelector(`#${id}`).getBBox(); 
+				cuadro.addEventListener('click', (e) => { 
+					event.stopPropagation();
+					datosCuadro = datosOrganigrama.find((registro) => registro.N == Numeral);
+					let cajaCuadro = document.querySelector(`#${id}`).getBBox(); 
 					let centroCuadroX = cajaCuadro.x + cajaCuadro.width / 2;
 					let centroCuadroY = cajaCuadro.y + cajaCuadro.height / 2;
-					console.log(centroCuadroX,centroCuadroY);
-					svg.call(zoom.transform, d3.zoomIdentity.translate(
-							svg.node().clientWidth / 2 - centroCuadroX, 
-							svg.node().clientHeight / 2 - centroCuadroY
-						).scale(4)
-					);
-					console.log(cajaCuadro); */
+					
 					document.querySelector("h1").textContent = datosCuadro.Nombre;
 					document.querySelector("h2").textContent = datosCuadro.Cargo;
 					document.querySelector("h3").textContent = datosCuadro.Estructura;
@@ -190,7 +185,20 @@
 					}
 					panel.insertAdjacentHTML('beforeend', "<p>" + datosCuadro.Descripción.split("\n").join("</p><p>") + "</p>");
 					panel.scrollTop = 0;
-					panel.classList.replace("oculto","visible");
+
+					svg.transition().duration(500).call(zoom.transform,
+					 d3.zoomIdentity
+					 	.translate(1800/4,810/2)
+					 	.scale(8)
+					 	.translate(
+							-centroCuadroX, 
+							-centroCuadroY, 
+						)
+						
+					).on("end", () => panel.classList.replace("oculto","visible") );
+
+
+					
 				}); 
 			}
 			logo.addEventListener('click', () => {
