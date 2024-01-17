@@ -138,6 +138,11 @@
 		visibility: hidden;
 		opacity: 0;
 	}	
+	#pantallaCompleta {
+		position:absolute;
+		top:1em;
+		left: 1em;
+	}	
 </style>
 </head>
 <body>
@@ -145,7 +150,7 @@
 		
 		let datosOrganigrama, datosCuadro;
 		let panel = document.querySelector("#panel");
-		let logo = document.querySelector("#logo");
+		let botónPantallaCompleta = document.querySelector("#pantallaCompleta");
 		let svg = d3.select('#Organigrama_SVG');
 
 
@@ -207,11 +212,13 @@
 					
 				}); 
 			}
-			logo.addEventListener('click', () => {
+			botónPantallaCompleta.addEventListener('click', () => {
 				if (document.fullscreenElement) {
 					document.exitFullscreen();
+					document.querySelector("#pantallaCompleta use").setAttribute("xlink:href","#maximizar");
 				} else {
 					document.body.requestFullscreen();
+					document.querySelector("#pantallaCompleta use").setAttribute("xlink:href","#minimizar");					
 				}
 			});
 		})
@@ -3330,4 +3337,15 @@
 </g>
 	</g>
 </svg>
+<svg display="none" xmlns="http://www.w3.org/2000/svg">
+	<g id="maximizar">
+		<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+	</g>
+	<g id="minimizar">
+		<path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>
+	</g>
+</svg>
+
+<div id="pantallaCompleta">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><use xlink:href="#maximizar"></use></svg>
 </body>
