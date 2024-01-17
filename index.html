@@ -218,8 +218,10 @@
 			document.addEventListener("fullscreenchange",() => {
 				if (document.fullscreenElement) {
 					document.querySelector("#pantallaCompleta use").setAttribute("xlink:href","#minimizar");
+					screen.orientation.lock('landscape');
 				} else {
 					document.querySelector("#pantallaCompleta use").setAttribute("xlink:href","#maximizar");	
+					screen.orientation.unlock();
 				}
 			});
 			botónPantallaCompleta.addEventListener('click', () => {
