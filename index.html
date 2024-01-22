@@ -9,7 +9,7 @@
 	  } else {
 	    document.addEventListener('DOMContentLoaded', fn);
 	  }
-	}	
+	}
 </script>
 <style>
 	*,
@@ -108,11 +108,13 @@
 	}
 	#pantallaCompleta {
 		position:absolute;
-		top: 1em;
-		right: 1em;
-		width: 1.5em;
-		height: 1.5em;
+		top: 0.75em;
+		right: 0.75em;
+		width: 2em;
+		height: 2em;
 		z-index: 1002;
+		padding: 0.25em;
+		cursor: pointer;
 	}
 	@media only screen and (orientation: portrait) {
 		#panel {
@@ -158,7 +160,7 @@
 </style>
 </head>
 <body>
-	<div id="telón"></div>	
+	<div id="telón"></div>
 	<div id="panel" class="oculto">
 		<h3></h3>
 		<h1></h1>
@@ -1411,46 +1413,45 @@
 
 					[fx,fy,fz] = window.matchMedia("(orientation: landscape)").matches ? [4,2,8] : [2,4,12];
 
-					svg.transition().duration(600).call(zoom.transform,
-					 d3.zoomIdentity
-					 	.translate(1800/fx,810/fy)
-					 	.scale(fz)
-					 	.translate(
-							-centroCuadroX,
-							-centroCuadroY,
-						)
+					svg
+						.transition()
+						.duration(600)
+						.call(zoom.transform,d3.zoomIdentity
+					 		.translate(1800/fx,810/fy)
+					 		.scale(fz)
+					 		.translate(
+								-centroCuadroX,
+								-centroCuadroY,
+							))
+						.on("end", () => {
+							document.querySelector("h1").textContent = datosCuadro.Nombre;
+							document.querySelector("h2").textContent = datosCuadro.Cargo;
+							document.querySelector("h3").textContent = datosCuadro.Estructura;
 
-					).on("end", () => {
-						document.querySelector("h1").textContent = datosCuadro.Nombre;
-						document.querySelector("h2").textContent = datosCuadro.Cargo;
-						document.querySelector("h3").textContent = datosCuadro.Estructura;
-
-						for (let parrafo of panel.querySelectorAll('p')) {
-							parrafo.remove();
+							for (let parrafo of panel.querySelectorAll('p')) {
+								parrafo.remove();
+							}
+							panel.insertAdjacentHTML('beforeend', "<p>" + datosCuadro.Descripción.split("\n").join("</p><p>") + "</p>");
+							panel.scrollTop = 0;
+							panel.classList.replace("oculto","visible")
 						}
-						panel.insertAdjacentHTML('beforeend', "<p>" + datosCuadro.Descripción.split("\n").join("</p><p>") + "</p>");
-						panel.scrollTop = 0;
-						panel.classList.replace("oculto","visible")
-					});
-
-
-
+						);
 				});
 			}
 			document.addEventListener("fullscreenchange",() => {
 				if (document.fullscreenElement) {
 					document.querySelector("#pantallaCompleta use").setAttribute("xlink:href","#minimizar");
-					screen.orientation.lock('landscape').catch(() =>null);
 				} else {
 					document.querySelector("#pantallaCompleta use").setAttribute("xlink:href","#maximizar");
-					screen.orientation.unlock();
 				}
 			});
 			botónPantallaCompleta.addEventListener('click', () => {
 				if (document.fullscreenElement) {
+					screen.orientation.unlock();
 					document.exitFullscreen();
 				} else {
 					document.body.requestFullscreen();
+					screen.orientation.lock('landscape').catch(() =>null);
 				}
 			});
 			document.getElementById("telón").classList.add("oculto");
