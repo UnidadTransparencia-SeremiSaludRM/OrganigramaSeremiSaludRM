@@ -1398,7 +1398,7 @@
 
 			for (let cuadro of document.querySelectorAll(".cuadroOrganigrama")) {
 				let id = cuadro.getAttribute("id");
-				let Numeral = id.replaceAll("_",".").replace("c","");
+				let Numeral = id.replace(/_/g,".").replace("c","");
 
 
 
