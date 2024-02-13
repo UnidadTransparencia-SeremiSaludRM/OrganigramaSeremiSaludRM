@@ -105,43 +105,6 @@
 		overflow-y: auto;
 		box-shadow: -1px 0 1px rgba(0,0,0,0.1),-2px 0 2px rgba(0,0,0,0.1),-4px 0 4px rgba(0,0,0,0.1),-8px 0 8px rgba(0,0,0,0.1);
 	}
-
-	#cl-barra {
-		position: absolute;
-		top:0;
-		left: 2em;
-	}
-	#cl-barra div {
-		height: 8px;
-		float: left;
-	}
-	#azul {
-		background-color: #0F69C4;
-		width: 58px;
-	}
-	#rojo {
-		background-color: #E22C2C;
-		width: 82px;		
-	}
-
-	#pantallaCompleta {
-		position:absolute;
-		top: 0.75em;
-		right: 0.75em;
-		width: 2em;
-		height: 2em;
-		z-index: 1002;
-		padding: 0.25em;
-		cursor: pointer;
-		transition-property: top,right,width,height;
-		transition-duration: 75ms;
-	}
-	#pantallaCompleta:hover {
-		top: 0.5em;
-		right: 0.5em;
-		width: 2.5em;
-		height: 2.5em;
-	}
 	@media only screen and (orientation: portrait) {
 		#panel {
 			width:100%;
@@ -152,6 +115,36 @@
 			left: 0;
 			box-shadow: 0 -1px 1px rgba(0,0,0,0.1),0 -2px 2px rgba(0,0,0,0.1),0 -4px 4px rgba(0,0,0,0.1),0 -8px 8px rgba(0,0,0,0.1);
 		}
+	}
+	#cl-barra {
+		position: absolute;
+		top:0;
+		left: 2em;
+		width: 140px;
+		height: 8px;
+		background: linear-gradient(90deg, rgba(15,105,196,1) 41.42%, rgba(226,44,44,1) 41.42%);
+	}
+	#pantallaCompleta {
+		position:absolute;
+		top: 0.75em;
+		left: 0.75em;
+		width: 2em;
+		height: 2em;
+		z-index: 1002;
+		padding: 0.25em;
+		cursor: pointer;
+		transition-property: top,left,width,height;
+		transition-duration: 75ms;
+		background-color: rgba(255,255,255,0.7);
+		border-radius: 8px;
+		backdrop-filter: blur(2px);
+		border: 1px solid rgba(255,255,255,0.25);
+	}
+	#pantallaCompleta:hover {
+		top: 0.5em;
+		left: 0.5em;
+		width: 2.5em;
+		height: 2.5em;
 	}
 	.cuadroOrganigrama {
 		cursor: pointer;
@@ -186,10 +179,7 @@
 <body>
 	<div id="telón"></div>
 	<div id="panel" class="oculto">
-		<div id="cl-barra">
-			<div id="azul"></div>
-			<div id="rojo"></div>
-		</div>
+		<div id="cl-barra"></div>
 		<h3></h3>
 		<h1></h1>
 		<h2></h2>
