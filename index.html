@@ -137,7 +137,7 @@
 		transition-duration: 75ms;
 		background-color: rgba(255,255,255,0.7);
 		border-radius: 8px;
-		backdrop-filter: blur(2px);		
+		backdrop-filter: blur(2px);
 	}
 	@media (hover: hover) {
 		#pantallaCompleta:hover {
@@ -149,6 +149,19 @@
 	}
 	.cuadroOrganigrama {
 		cursor: pointer;
+	}
+
+	.cuadroOrganigrama rect {
+		transition-property: fill;
+		transition-duration: 200ms;
+	}
+
+	.cuadroOrganigrama.activo rect {
+		fill:#005b8c !important;
+	}
+
+	.cuadroOrganigrama.activo text, .cuadroOrganigrama.activo tspan {
+		fill:#ffffff !important;
 	}
 
 	.visible {
@@ -1407,6 +1420,7 @@
 				d3.select('#contenidoOrganigrama')
 					.attr('transform',e.transform);
 				panel.classList.replace("visible","oculto");
+				document.querySelectorAll(".activo").forEach((c) => c.classList.remove("activo"));
 			});
 
 		svg.call(zoom);
@@ -1425,7 +1439,7 @@
 					event.stopPropagation();
 					panel.classList.replace("visible","oculto");
 					datosCuadro = datosOrganigrama.find((registro) => registro.N == Numeral);
-					let cajaCuadro = document.querySelector(`#${id}`).getBBox();
+					let cajaCuadro = cuadro.getBBox();
 					let centroCuadroX = cajaCuadro.x + cajaCuadro.width / 2;
 					let centroCuadroY = cajaCuadro.y + cajaCuadro.height / 2;
 					let fx,fy,fz;
@@ -1452,7 +1466,8 @@
 							}
 							panel.insertAdjacentHTML('beforeend', "<p>" + datosCuadro.Descripción.split("\n").join("</p><p>") + "</p>");
 							panel.scrollTop = 0;
-							panel.classList.replace("oculto","visible")
+							panel.classList.replace("oculto","visible");
+							cuadro.classList.add("activo");
 						}
 						);
 				});
