@@ -1564,16 +1564,6 @@
 					});
 				}
 
-				const fuse = new Fuse(indiceBusqueda, {
-				    keys: [
-				        { name: 'nombre',   weight: 0.7 },
-				        { name: 'etiqueta', weight: 0.3 }
-				    ],
-				    threshold:          0.4,
-				    ignoreLocation:     true,
-				    useExtendedSearch:  false,
-				});
-
 				cuadro.addEventListener('click', (e) => {
 					e.stopPropagation();
 					panel.classList.replace("visible","oculto");
@@ -1611,6 +1601,17 @@
 						);
 				});
 			}
+
+			const fuse = new Fuse(indiceBusqueda, {
+			    keys: [
+			        { name: 'nombre',   weight: 0.7 },
+			        { name: 'etiqueta', weight: 0.3 }
+			    ],
+			    threshold:          0.4,
+			    ignoreLocation:     true,
+			    useExtendedSearch:  false,
+			});
+
 
 			let   indiceResaltado = -1;
 
