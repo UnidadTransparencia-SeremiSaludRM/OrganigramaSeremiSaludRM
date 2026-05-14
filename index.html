@@ -1509,7 +1509,7 @@
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0b437f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><use xlink:href="#buscar"></use></svg>
 	</div>
 	<div id="buscadorPanel" class="oculto">
-		<input id="buscadorInput" type="search" placeholder="Buscar unidad o jefatura…" autocomplete="off" spellcheck="false">
+		<input id="buscadorInput" type="search" placeholder="Buscar…" autocomplete="off" spellcheck="false">
 		<ul id="buscadorLista"></ul>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
@@ -1564,8 +1564,9 @@
 					});
 				}
 
-				cuadro.addEventListener('click', (e) => {
+				cuadro.addEventListener('click', (e) => {					
 					e.stopPropagation();
+					cerrarBuscador();
 					panel.classList.replace("visible","oculto");
 					datosCuadro = datosOrganigrama.find((registro) => registro.N == Numeral);
 					let cajaCuadro = cuadro.getBBox();
@@ -1622,7 +1623,6 @@
 			}
 
 			function abrirNodo(id) {
-				cerrarBuscador();
 				const cuadro = document.querySelector(id);
 				if (cuadro) cuadro.dispatchEvent(new MouseEvent('click', { bubbles: true }));
 			}
