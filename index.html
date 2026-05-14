@@ -1513,47 +1513,8 @@
 		<ul id="buscadorLista"></ul>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+	<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
 
-	<!-- LiquidMetal: algoritmo de scoring difuso inspirado en QuickSilver -->
-	<!-- Basado en liquidmetal.js por Ryan McGeary (github.com/rmm5t/liquidmetal) -->
-	<script>
-		const LiquidMetal = (() => {
-			const SCORE_NO_MATCH  = 0.0;
-			const SCORE_MATCH     = 1.0;
-			const SCORE_TRAILING  = 0.8;
-			const SCORE_LEADING   = 0.9;
-			const SCORE_BUFFER    = 0.85;
-
-			function score(string, abbrev) {
-				if (!abbrev || abbrev.length === 0) return SCORE_TRAILING;
-				if (abbrev.length > string.length)  return SCORE_NO_MATCH;
-				const scores = buildScoreArray(string.toLowerCase(), abbrev.toLowerCase(), string);
-				if (!scores) return SCORE_NO_MATCH;
-				return scores.reduce((acc, v) => acc + v, 0) / scores.length;
-			}
-
-			function buildScoreArray(string, abbrev, original) {
-				const scores    = new Array(string.length).fill(SCORE_TRAILING);
-				let   lastIndex = -1;
-				for (let i = 0; i < abbrev.length; i++) {
-					const idx = string.indexOf(abbrev[i], lastIndex + 1);
-					if (idx < 0) return null;
-					lastIndex  = idx;
-					const prev = idx > 0 ? string[idx - 1] : null;
-					const atWordStart = idx === 0 || prev === ' ' || prev === '_' || prev === '-' || prev === '.';
-					const isUpperCase = original[idx] === original[idx].toUpperCase() && original[idx] !== original[idx].toLowerCase();
-					scores[idx] = (atWordStart || isUpperCase) ? SCORE_MATCH : SCORE_BUFFER;
-				}
-				const firstMatch = scores.indexOf(SCORE_MATCH);
-				if (firstMatch > 0) {
-					for (let j = 0; j < firstMatch; j++) scores[j] = SCORE_LEADING;
-				}
-				return scores;
-			}
-
-			return { score };
-		})();
-	</script>
 
 	<script type="module">
 		let datosOrganigrama, datosCuadro;
@@ -1599,9 +1560,19 @@
 					indiceBusqueda.push({
 						id:      '#' + id,
 						nombre:  datosCuadro.Nombre,
-						etiqueta: `${datosCuadro.Nombre} - ${datosCuadro.Estructura}`
+						etiqueta: `${datosCuadro.Estructura} - ${datosCuadro.Nombre}`
 					});
 				}
+
+				const fuse = new Fuse(indiceBusqueda, {
+				    keys: [
+				        { name: 'nombre',   weight: 0.7 },
+				        { name: 'etiqueta', weight: 0.3 }
+				    ],
+				    threshold:          0.4,
+				    ignoreLocation:     true,
+				    useExtendedSearch:  false,
+				});
 
 				cuadro.addEventListener('click', (e) => {
 					e.stopPropagation();
@@ -1650,6 +1621,7 @@
 			}
 
 			function abrirNodo(id) {
+				cerrarBuscador();
 				const cuadro = document.querySelector(id);
 				if (cuadro) cuadro.dispatchEvent(new MouseEvent('click', { bubbles: true }));
 			}
@@ -1681,6 +1653,7 @@
 			}
 
 			function cerrarBuscador() {
+			    document.querySelectorAll(".destacado").forEach(c => c.classList.remove("destacado"));
 				buscadorPanel.classList.replace("visible","oculto");
 				buscadorInput.value = '';
 				buscadorLista.innerHTML = '';
@@ -1702,25 +1675,17 @@
 			}
 
 			buscadorInput.addEventListener('input', () => {
-				const q = buscadorInput.value.trim();
-				if (!q) { buscadorLista.innerHTML = ''; return; }
-				const resultados = indiceBusqueda
-					.map(item => ({
-						...item,
-						score: Math.max(
-							LiquidMetal.score(normalizar(item.nombre), q),
-							LiquidMetal.score(normalizar(item.etiqueta), q) * 0.9
-						)
-					}))
-					.filter(r => r.score > 0)
-					.sort((a, b) => b.score - a.score)
-					.slice(0, 8);
-				renderLista(resultados);
-				if (resultados.length > 0) {
-					indiceResaltado = 0;
-					actualizarResaltado();
-					destacarNodo(resultados[0].id);
-				}
+			    const q = normalizar(buscadorInput.value.trim());
+			    if (!q) { buscadorLista.innerHTML = ''; return; }
+			    const resultados = fuse.search(q)
+			        .slice(0, 8)
+			        .map(r => r.item);
+			    renderLista(resultados);
+			    if (resultados.length > 0) {
+			        indiceResaltado = 0;
+			        actualizarResaltado();
+			        destacarNodo(resultados[0].id);
+			    }
 			});
 
 			buscadorInput.addEventListener('keydown', (e) => {
@@ -1746,10 +1711,7 @@
 
 			buscadorInput.addEventListener('focus', () => iniciarVista() );
 
-			buscadorInput.addEventListener('blur', () => cerrarBuscador() );
-
-
-			botónInicio.addEventListener('click', () => iniciarVista() )
+			botónInicio.addEventListener('click', () => iniciarVista() );
 
 
 			document.addEventListener("fullscreenchange",() => {
@@ -1768,12 +1730,31 @@
 					screen.orientation.lock('landscape').catch(() =>null);
 				}
 			});
+
 			document.addEventListener('keydown', (e) => {
 			    if (e.ctrlKey && e.key === 'f') {
 			        e.preventDefault();
 			        botónBusqueda.click();
+			        return;
+			    }
+			    if (e.key === 'Escape') {
+			        if (buscadorPanel.classList.contains("visible")) {
+			            if (buscadorInput.value !== '') {
+			                buscadorInput.value = '';
+			                buscadorLista.innerHTML = '';
+			            } else {
+			                cerrarBuscador();
+			            }
+			        } else {
+			            iniciarVista();
+			        }
 			    }
 			});
+
+
+
+
+
 			document.getElementById("telón").classList.add("oculto");
 		})
 	</script>
