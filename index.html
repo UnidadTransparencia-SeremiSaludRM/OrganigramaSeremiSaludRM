@@ -136,7 +136,7 @@
 		cursor: pointer;
 		transition-property: top, left, width, height;
 		transition-duration: 75ms;
-		background-color: rgba(255,255,255,0.7);
+		background-color: rgba(255,255,255,0.75);
 		border-radius: 8px;
 		backdrop-filter: blur(2px);
 	}
@@ -153,6 +153,9 @@
 	#busqueda {
 		left: 3.5em;
 	}
+	#inicio {
+		left: 6.25em;
+	}
 	@media (hover: hover) {
 		#pantallaCompleta:hover {
 			left: 0.5em;
@@ -160,29 +163,32 @@
 		#busqueda:hover {
 			left: 3.25em;
 		}
+		#inicio:hover {
+			left: 6em;
+		}
 	}
 
 	/* Buscador */
 	#buscadorPanel {
 		position: absolute;
 		top: 0.75em;
-		left: 6em;
+		left: 8.75em;
 		z-index: 1002;
 		display: flex;
 		flex-direction: column;
 		gap: 0;
-		width: min(420px, calc(100vw - 7em));
+		width: min(420px, calc(100vw - 9.5em));
 	}
 	#buscadorInput {
 		width: 100%;
 		padding: 0.4em 1em;
-		border: 2px solid #0b437f;
+		border: 1px solid #0b437f;
 		border-radius: 999px;
 		font-family: inherit;
 		font-size: 0.95em;
 		color: #05203d;
-		background-color: rgba(255,255,255,0.95);
-		backdrop-filter: blur(4px);
+		background-color: rgba(255,255,255,0.7);
+		backdrop-filter: blur(2px);
 		outline: none;
 		box-shadow: 0 2px 8px rgba(11,67,127,0.15);
 	}
@@ -221,8 +227,8 @@
 	}
 	#buscadorLista li:hover,
 	#buscadorLista li.resaltado {
-		background-color: #e3edf7;
-		color: #0b437f;
+		background-color: #006196;
+		color: #ffffff;
 	}
 
 	.cuadroOrganigrama {
@@ -238,11 +244,15 @@
 		pointer-events: none;
 	}
 
-	.cuadroOrganigrama.activo rect {
+	.cuadroOrganigrama.activo rect,
+	.cuadroOrganigrama.destacado rect {
 		fill:#006196 !important;
 	}
 
-	.cuadroOrganigrama.activo text, .cuadroOrganigrama.activo tspan {
+	.cuadroOrganigrama.activo text,
+	.cuadroOrganigrama.activo tspan,
+	.cuadroOrganigrama.destacado text,
+	.cuadroOrganigrama.destacado tspan {
 		fill:#ffffff !important;
 	}
 
@@ -1480,6 +1490,10 @@
 		<g id="minimizar">
 			<path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>
 		</g>
+		<g id="iniciar">
+			<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+			<polyline points="9 22 9 12 15 12 15 22"></polyline>
+		</g>
 		<g id="buscar">
 			<circle cx="11" cy="11" r="8"></circle>
 			<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -1488,8 +1502,11 @@
 	<div id="pantallaCompleta" class="botónFlotante">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0b437f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><use xlink:href="#maximizar"></use></svg>
 	</div>
+	<div id="inicio" class="botónFlotante">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0b437f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><use xlink:href="#iniciar"></use></svg>
+	</div>
 	<div id="busqueda" class="botónFlotante">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0b437f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use xlink:href="#buscar"></use></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0b437f" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><use xlink:href="#buscar"></use></svg>
 	</div>
 	<div id="buscadorPanel" class="oculto">
 		<input id="buscadorInput" type="search" placeholder="Buscar unidad o jefatura…" autocomplete="off" spellcheck="false">
@@ -1540,8 +1557,14 @@
 
 	<script type="module">
 		let datosOrganigrama, datosCuadro;
-		let panel = document.getElementById("panel");
-		let botónPantallaCompleta = document.getElementById("pantallaCompleta");
+		const panel                 = document.getElementById("panel");
+		const botónPantallaCompleta = document.getElementById("pantallaCompleta");
+		const botónBusqueda         = document.getElementById("busqueda");
+		const botónInicio           = document.getElementById("inicio");
+		const buscadorPanel         = document.getElementById("buscadorPanel");
+		const buscadorInput         = document.getElementById("buscadorInput");
+		const buscadorLista         = document.getElementById("buscadorLista");
+
 		let svg = d3.select('#Organigrama_SVG');
 		const urlDatosOrganigrama = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSdd7YSKHLGaFBb6XzN67YlYd72VGrtaHYB40U1b5_dg-zv8tf1BiJf-EqcU5DKAg/pub?gid=821030335&single=true&output=csv"
 
@@ -1556,8 +1579,11 @@
 				document.querySelectorAll(".activo").forEach((c) => c.classList.remove("activo"));
 			});
 
+		const iniciarVista = () => svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity);
+
+
 		svg.call(zoom);
-		svg.on("dblclick.zoom",()=> svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity));
+		svg.on("dblclick.zoom",()=> iniciarVista() );
 		ready(async function() {
 			datosOrganigrama = await d3.csv(urlDatosOrganigrama);
 
@@ -1572,12 +1598,13 @@
 				if (datosCuadro) {
 					indiceBusqueda.push({
 						id:      '#' + id,
+						nombre:  datosCuadro.Nombre,
 						etiqueta: `${datosCuadro.Nombre} - ${datosCuadro.Estructura}`
 					});
 				}
 
 				cuadro.addEventListener('click', (e) => {
-					event.stopPropagation();
+					e.stopPropagation();
 					panel.classList.replace("visible","oculto");
 					datosCuadro = datosOrganigrama.find((registro) => registro.N == Numeral);
 					let cajaCuadro = cuadro.getBBox();
@@ -1614,28 +1641,12 @@
 				});
 			}
 
-			// --- Buscador ---
-			const botónBusqueda   = document.getElementById("busqueda");
-			const buscadorPanel   = document.getElementById("buscadorPanel");
-			const buscadorInput   = document.getElementById("buscadorInput");
-			const buscadorLista   = document.getElementById("buscadorLista");
 			let   indiceResaltado = -1;
 
-			function centrarNodo(id) {
-				const cuadro = document.querySelector(id);
-				if (!cuadro) return;
-				const caja = cuadro.getBBox();
-				const cx   = caja.x + caja.width  / 2;
-				const cy   = caja.y + caja.height / 2;
-				const [fx, fy, fz] = window.matchMedia("(orientation: landscape)").matches
-					? [4, 2, 8] : [2, 4, 12];
-				svg.transition().duration(400)
-					.call(zoom.transform, d3.zoomIdentity
-						.translate(1800/fx, 810/fy)
-						.scale(fz)
-						.translate(-cx, -cy));
-				document.querySelectorAll(".activo").forEach(c => c.classList.remove("activo"));
-				cuadro.classList.add("activo");
+			function destacarNodo(id) {
+			    document.querySelectorAll(".destacado").forEach(c => c.classList.remove("destacado"));
+			    const cuadro = document.querySelector(id);
+			    if (cuadro) cuadro.classList.add("destacado");
 			}
 
 			function abrirNodo(id) {
@@ -1653,7 +1664,7 @@
 					li.addEventListener('mouseenter', () => {
 						indiceResaltado = i;
 						actualizarResaltado();
-						centrarNodo(r.id);
+						destacarNodo(r.id);
 					});
 					li.addEventListener('click', () => {
 						cerrarBuscador();
@@ -1675,6 +1686,7 @@
 				buscadorLista.innerHTML = '';
 			}
 
+
 			botónBusqueda.addEventListener('click', () => {
 				if (buscadorPanel.classList.contains("visible")) {
 					cerrarBuscador();
@@ -1684,11 +1696,22 @@
 				}
 			});
 
+
+			function normalizar(str) {
+    			return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+			}
+
 			buscadorInput.addEventListener('input', () => {
 				const q = buscadorInput.value.trim();
 				if (!q) { buscadorLista.innerHTML = ''; return; }
 				const resultados = indiceBusqueda
-					.map(item => ({ ...item, score: LiquidMetal.score(item.etiqueta, q) }))
+					.map(item => ({
+						...item,
+						score: Math.max(
+							LiquidMetal.score(normalizar(item.nombre), q),
+							LiquidMetal.score(normalizar(item.etiqueta), q) * 0.9
+						)
+					}))
 					.filter(r => r.score > 0)
 					.sort((a, b) => b.score - a.score)
 					.slice(0, 8);
@@ -1696,7 +1719,7 @@
 				if (resultados.length > 0) {
 					indiceResaltado = 0;
 					actualizarResaltado();
-					centrarNodo(resultados[0].id);
+					destacarNodo(resultados[0].id);
 				}
 			});
 
@@ -1707,12 +1730,12 @@
 					e.preventDefault();
 					indiceResaltado = Math.min(indiceResaltado + 1, items.length - 1);
 					actualizarResaltado();
-					centrarNodo(items[indiceResaltado].dataset.id);
+					destacarNodo(items[indiceResaltado].dataset.id);
 				} else if (e.key === 'ArrowUp') {
 					e.preventDefault();
 					indiceResaltado = Math.max(indiceResaltado - 1, 0);
 					actualizarResaltado();
-					centrarNodo(items[indiceResaltado].dataset.id);
+					destacarNodo(items[indiceResaltado].dataset.id);
 				} else if (e.key === 'Enter' && indiceResaltado >= 0) {
 					cerrarBuscador();
 					abrirNodo(items[indiceResaltado].dataset.id);
@@ -1720,6 +1743,14 @@
 					cerrarBuscador();
 				}
 			});
+
+			buscadorInput.addEventListener('focus', () => iniciarVista() );
+
+			buscadorInput.addEventListener('blur', () => cerrarBuscador() );
+
+
+			botónInicio.addEventListener('click', () => iniciarVista() )
+
 
 			document.addEventListener("fullscreenchange",() => {
 				if (document.fullscreenElement) {
@@ -1736,6 +1767,12 @@
 					document.body.requestFullscreen();
 					screen.orientation.lock('landscape').catch(() =>null);
 				}
+			});
+			document.addEventListener('keydown', (e) => {
+			    if (e.ctrlKey && e.key === 'f') {
+			        e.preventDefault();
+			        botónBusqueda.click();
+			    }
 			});
 			document.getElementById("telón").classList.add("oculto");
 		})
