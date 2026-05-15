@@ -1539,6 +1539,8 @@
 
 		const iniciarVista = () => svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity);
 
+		const normalizar = (str) => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
 
 		svg.call(zoom);
 		svg.on("dblclick.zoom",()=> iniciarVista() );
@@ -1546,6 +1548,42 @@
 			datosOrganigrama = await d3.csv(urlDatosOrganigrama);
 
 			const indiceBusqueda = [];
+
+			function procesarTexto(texto) {
+			    const lineas = texto
+			        .split('\n')
+			        .map(l => l.trim());
+
+			    const html        = [];
+			    let   tipoLista   = null; // 'ul' | 'ol' | null
+
+			    const cerrarLista = () => {
+			        if (tipoLista) { html.push(`</${tipoLista}>`); tipoLista = null; }
+			    };
+
+			    for (const linea of lineas) {
+			        if (!linea) { cerrarLista(); continue; }
+
+			        if (/^[•\-]\s*(.+)/.test(linea)) {
+			            const contenido = linea.replace(/^[•\-]\s*/, '');
+			            if (tipoLista !== 'ul') { cerrarLista(); html.push('<ul>'); tipoLista = 'ul'; }
+			            html.push(`<li>${contenido}</li>`);
+
+			        } else if (/^(\d+[\.\-]+|[a-z]\))\s*(.+)/i.test(linea)) {
+			            const contenido = linea.replace(/^(\d+[\.\-]+|[a-z]\))\s*/i, '');
+			            if (tipoLista !== 'ol') { cerrarLista(); html.push('<ol>'); tipoLista = 'ol'; }
+			            html.push(`<li>${contenido}</li>`);
+
+			        } else {
+			            cerrarLista();
+			            html.push(`<p>${linea}</p>`);
+			        }
+			    }
+			    cerrarLista();
+			    return html.join('');
+			}
+
+
 
 			for (let cuadro of document.querySelectorAll(".cuadroOrganigrama")) {
 				let id      = cuadro.getAttribute("id");
@@ -1555,9 +1593,11 @@
 
 				if (datosCuadro) {
 					indiceBusqueda.push({
-						id:      '#' + id,
-						nombre:  datosCuadro.Nombre,
-						etiqueta: `${datosCuadro.Estructura} - ${datosCuadro.Nombre}`
+					    id:           '#' + id,
+					    nombre:       datosCuadro.Nombre,
+					    etiqueta:     `${datosCuadro.Estructura} - ${datosCuadro.Nombre}`,
+					    nombreNorm:   normalizar(datosCuadro.Nombre),
+					    etiquetaNorm: normalizar(`${datosCuadro.Estructura} - ${datosCuadro.Nombre}`)
 					});
 				}
 
@@ -1591,7 +1631,7 @@
 							for (let parrafo of panel.querySelectorAll('p')) {
 								parrafo.remove();
 							}
-							panel.insertAdjacentHTML('beforeend', "<p>" + datosCuadro.Descripción.split("\n").join("</p><p>") + "</p>");
+							panel.insertAdjacentHTML('beforeend', procesarTexto(datosCuadro.Descripción));
 							panel.scrollTop = 0;
 							panel.classList.replace("oculto","visible");
 							cuadro.classList.add("activo");
@@ -1601,10 +1641,10 @@
 			}
 
 			const fuse = new Fuse(indiceBusqueda, {
-			    keys: [
-			        { name: 'nombre',   weight: 0.7 },
-			        { name: 'etiqueta', weight: 0.3 }
-			    ],
+				keys: [
+				    { name: 'nombreNorm',   weight: 0.7 },
+				    { name: 'etiquetaNorm', weight: 0.3 }
+				],
 			    threshold:          0.4,
 			    ignoreLocation:     true,
 			    useExtendedSearch:  false,
@@ -1667,10 +1707,6 @@
 				}
 			});
 
-
-			function normalizar(str) {
-    			return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-			}
 
 			buscadorInput.addEventListener('input', () => {
 			    const q = normalizar(buscadorInput.value.trim());
