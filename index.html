@@ -1552,7 +1552,8 @@
 			function procesarTexto(texto) {
 			    const lineas = texto
 			        .split('\n')
-			        .map(l => l.trim());
+			        .map(l => l.trim())
+			        .filter(l => l !=="");
 
 			    const html        = [];
 			    let   tipoLista   = null; // 'ul' | 'ol' | null
