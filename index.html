@@ -1628,7 +1628,7 @@
 							document.querySelector("h2").textContent = datosCuadro.Cargo;
 							document.querySelector("h3").textContent = datosCuadro.Estructura;
 
-							for (let parrafo of panel.querySelectorAll('p')) {
+							for (let parrafo of panel.querySelectorAll('p, ul, ol')) {
 								parrafo.remove();
 							}
 							panel.insertAdjacentHTML('beforeend', procesarTexto(datosCuadro.Descripción));
