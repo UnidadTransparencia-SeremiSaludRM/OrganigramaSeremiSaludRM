@@ -1563,8 +1563,6 @@
 			    };
 
 			    for (const linea of lineas) {
-			        if (!linea) { cerrarLista(); continue; }
-
 			        if (/^[•\-]\s*(.+)/.test(linea)) {
 			            const contenido = linea.replace(/^[•\-]\s*/, '');
 			            if (tipoLista !== 'ul') { cerrarLista(); html.push('<ul>'); tipoLista = 'ul'; }
